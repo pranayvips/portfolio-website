@@ -1,0 +1,215 @@
+.sourceCodeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #181717;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+
+.sourceCodeButton .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.sourceCodeButton svg path {
+  transition: 400ms;
+}
+
+.sourceCodeButton:hover {
+  background-color: transparent;
+}
+
+.sourceCodeButton:hover .text {
+  color: #181717;
+}
+
+.sourceCodeButton:hover svg path {
+  fill: #181717;
+}
+
+
+.dark{
+  .sourceCodeButton{
+    background-color: white;
+    outline-color: white;
+  }
+  .sourceCodeButton .text {
+    color: black;
+  }
+.sourceCodeButton svg {
+  stroke: black;
+  fill: black;
+}
+.sourceCodeButton:hover{
+  background-color: transparent;
+}
+.sourceCodeButton:hover .text {
+  color: white;
+}
+
+.sourceCodeButton:hover svg path {
+  fill: #fff;
+}
+}
+
+
+
+
+
+
+
+
+
+.shareButton {
+  height: 40px;
+  width: 15em;
+  border: none;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  transform: scale(.8) translateY(-5px);
+}
+
+.shareButton span {
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  column-gap: 10px;
+  height: 3em;
+  width: 11.5em;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 55px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  transition: all 0.5s;
+  svg{
+    width: 25px;
+    height: 25px;
+    stroke: white;
+  }
+}
+
+.dark{
+  .shareButton  {
+    background-color: black;
+  }
+  .shareButton span {
+    background-color: white;
+    color: black;
+    svg{
+      stroke: black;
+    }
+  }
+  .shareButton .container svg {
+    fill: white;
+  }
+}
+
+.shareButton .container {
+  z-index: -1;
+  width: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50px);
+  transition: all 0.4s;
+}
+
+.shareButton .container svg:hover{
+  transform: scale(1.5);
+}
+.shareButton .container svg {
+  padding: 0 10px;
+  transition: transform .5s;
+}
+
+.shareButton:hover span {
+  width: 0;
+}
+
+.shareButton:hover .container {
+  z-index: 2;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.submitBtn {
+  /* width: 130px; */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  .svgIcon {
+    width: 16px;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+}
+
+
+.submitBtn::before {
+  width: 100%;
+  /* width: 130px; */
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.submitBtn:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.submitBtn:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
+}

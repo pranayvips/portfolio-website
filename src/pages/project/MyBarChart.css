@@ -1,0 +1,13 @@
+.lang-icon-medium{
+    svg{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.display-project-scroller::-webkit-scrollbar-thumb{
+    background-color: grey;
+}
+.display-project-scroller::-webkit-scrollbar{
+    width: 10px;
+}

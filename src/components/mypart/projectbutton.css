@@ -1,0 +1,354 @@
+.projectOpenButton {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0em 10px 10px;
+  background-color: yellow;
+  cursor: pointer;
+  box-shadow: 4px 6px 0px black;
+  border: 4px solid;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  transition: box-shadow 250ms, transform 250ms, filter 50ms;
+}
+.projectOpenButton:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 3px 0px black;
+}
+.projectOpenButton:active {
+  filter: saturate(0.75);
+}
+.projectOpenButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: pink;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform 250ms;
+}
+.projectOpenButton:hover::after {
+  transform: translateX(0);
+}
+.projectOpenButton {
+  .bgContainer {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    max-width: 35%; /* adjust this if the button text is not proper */
+    font-size: 1em;
+    font-weight: 600;
+  }
+  .bgContainer span {
+    position: relative;
+    transform: translateX(-100%);
+    transition: all 250ms;
+  }
+  .projectOpenButton:hover .bgContainer > span {
+    transform: translateX(0);
+  }
+  .arrowContainer {
+    padding: 5px;
+    margin-inline-end: 1em;
+    border: 3px solid;
+    border-radius: 50%;
+    background-color: pink;
+    position: relative;
+    overflow: hidden;
+    transition: transform 250ms, background-color 250ms;
+    z-index: 100;
+  }
+  .arrowContainer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: yellow;
+    transform: translateX(-100%);
+    z-index: -1;
+    transition: transform 250ms ease-in-out;
+  }
+  .arrowContainer svg {
+    vertical-align: middle;
+  }
+}
+.projectOpenButton:hover .arrowContainer::after {
+  transform: translateX(0);
+}
+.projectOpenButton:hover .arrowContainer {
+  transform: translateX(5px);
+}
+.projectOpenButton:active .arrowContainer {
+  transform: translateX(8px);
+}
+
+
+
+.projectGithubButton {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+.projectGithubButton{
+
+    .svgContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+        letter-spacing: 0.8px;
+        border-radius: 10px;
+        transition: all .3s;
+        border: 1px solid rgba(156, 156, 156, 0.466);
+    }
+    
+    .BG {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #181818;
+        z-index: -1;
+        border-radius: 10px;
+        pointer-events: none;
+        transition: all .3s;
+    }
+}
+    
+.projectGithubButton:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.projectGithubButton:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+
+.projectLoader {
+  display: flex;
+  align-items: center;
+
+
+.bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: .25s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: .5s;
+}
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: blue;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#svg-global {
+  zoom: 1.2;
+  overflow: visible;
+}
+
+@keyframes fade-particles {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+}
+
+#particles {
+  animation: fade-particles 5s infinite alternate;
+}
+.particle {
+  animation: floatUp linear infinite;
+}
+
+.p1 {
+  animation-duration: 2.2s;
+  animation-delay: 0s;
+}
+.p2 {
+  animation-duration: 2.5s;
+  animation-delay: 0.3s;
+}
+.p3 {
+  animation-duration: 2s;
+  animation-delay: 0.6s;
+}
+.p4 {
+  animation-duration: 2.8s;
+  animation-delay: 0.2s;
+}
+.p5 {
+  animation-duration: 2.3s;
+  animation-delay: 0.4s;
+}
+.p6 {
+  animation-duration: 3s;
+  animation-delay: 0.1s;
+}
+.p7 {
+  animation-duration: 2.1s;
+  animation-delay: 0.5s;
+}
+.p8 {
+  animation-duration: 2.6s;
+  animation-delay: 0.2s;
+}
+.p9 {
+  animation-duration: 2.4s;
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce-lines {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+#line-v1,
+#line-v2,
+#node-server,
+#panel-rigth,
+#reflectores,
+#particles {
+  animation: bounce-lines 3s ease-in-out infinite alternate;
+}
+#line-v2 {
+  animation-delay: 0.2s;
+}
+
+#node-server,
+#panel-rigth,
+#reflectores,
+#particles {
+  animation-delay: 0.4s;
+}
+
+
+
+
+
+.projectFilter {
+  border: none;
+  position: relative;
+  padding: 0.7em 2.4em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: royalblue;
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.projectFilter span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 4px solid royalblue;
+}
+
+.projectFilter span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.3s;
+}
+.dark{
+  .projectFilter span::before {
+    background: var(--background);
+  }
+}
+
+.projectFilter:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: royalblue;
+}
+
+.projectFilter:hover {
+  color: white;
+}
+
+.projectFilter:active span::before {
+  background: #2751cd;
+}
