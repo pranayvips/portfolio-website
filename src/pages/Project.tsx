@@ -1,6 +1,4 @@
-import Stack from "@/components/Components/Stack/Stack";
 import { AuroraText } from "@/components/magicui/aurora-text";
-import { ProjectItem } from "@/components/mypart/ProjectItem";
 import {
   OpenButton,
   GithubButton,
@@ -8,7 +6,7 @@ import {
   ProjectHeading,
   ProjectFilter,
 } from "@/components/mypart/ProjectButton";
-import React, { useRef, useState } from "react";
+import  {  useState } from "react";
 import { motion } from "framer-motion";
 
 interface PopUpCardProp {

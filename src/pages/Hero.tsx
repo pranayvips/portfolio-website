@@ -1,10 +1,5 @@
-import React, { useRef } from 'react'
+import  { useRef } from 'react'
 import { motion } from "framer-motion";
-// import SplitText from '../reactbit/SplitText/SplitText'
-// import RotatingText from '../reactbit/RotatingText/RotatingText'
-// import CircularText from '../reactbit/CircularText/CircularText'
-import { AuroraText } from "@/components/magicui/aurora-text";
-import { Button } from "@/components/ui/button";
 import { CoolMode } from "@/components/magicui/cool-mode";
 import { FlipText } from "@/components/magicui/flip-text";
 import { SpinningText } from "@/components/magicui/spinning-text";

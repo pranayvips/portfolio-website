@@ -1,8 +1,6 @@
 import { AuroraText } from "@/components/magicui/aurora-text";
-import { RippleButton } from "@/components/magicui/ripple-button";
-import { SparklesText } from "@/components/magicui/sparkles-text";
 import SkillTabButton from "@/components/mypart/SkillTabButton";
-import React, { useState } from "react";
+import  { useState } from "react";
 import { motion } from "framer-motion";
 
 const skillButtonClass =

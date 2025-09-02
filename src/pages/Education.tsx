@@ -1,9 +1,8 @@
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
-import React, { useState } from "react";
+import  { useState } from "react";
 import {
   faPython,
   faAngular,
-  faNodeJs,
   faHtml5,
   faCss3,
   faJs,

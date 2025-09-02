@@ -1,10 +1,8 @@
-import Particles from '@/components/Backgrounds/Particles/Particles'
 import { Highlighter } from '@/components/magicui/highlighter'
 import { LineShadowText } from '@/components/magicui/line-shadow-text'
 import { SparklesText } from '@/components/magicui/sparkles-text'
 import {AboutButton , AboutEducation, AboutLoader, AboutProject} from '@/components/mypart/AboutButton'
 import { MySkillCloud } from '@/components/mypart/MySkill'
-import ScrollReveal from '@/components/TextAnimations/ScrollReveal/ScrollReveal'
 import { motion } from "framer-motion";
 
 
@@ -56,9 +54,6 @@ const About = () => {
             <AboutEducation />
             <AboutButton />
             <AboutProject classname="ml-auto sm:ml-0" />
-            {/* <AboutButton title="Education" svgPath="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-            <AboutButton title="Repo" svgPath="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-            <AboutButton title="Contact" svgPath="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /> */}
           </div>
         </div>
       </div>

@@ -500,12 +500,12 @@ const StepperComponent = ({array}:{array:any})=>{
 
 
 const ProjectDisplay = ({prjName="prj-reviewlens",setPrjName}:{setPrjName:any,prjName:string}) => {
-        const containerref = useRef(null)
-        const containerrefTab = useRef(null)
-        const imageRef = useRef(null)
+        const containerref = useRef<HTMLDivElement | null>(null)
+        const containerrefTab = useRef<HTMLDivElement | null>(null)
+        const imageRef = useRef<HTMLImageElement | null>(null)
         const imageRefTab = useRef(null)
         const [imageTab,setImageTab] = useState(0)
-        const [image,setImage] = useState([])
+        const [image,setImage] = useState<Array<any> | null>([])
         const [navtab,setNavTab] = useState(0)
 
         const NavbarLinks = ({title,current}: { title: string; current: number })=>{
@@ -524,10 +524,13 @@ const ProjectDisplay = ({prjName="prj-reviewlens",setPrjName}:{setPrjName:any,pr
         setImage(imgList);
         
     //     // this is for click on iamge and setting on left tab
-        containerref.current.addEventListener("click",(e:MouseEvent)=>{
-                  if (e.target.classList.contains('thumb')) {
-                      imageRef.current.src = e.target.src;
-                  }
+          if(!containerref.current)return
+          containerref.current.addEventListener("click",(e:any)=>{
+            if (e.target.classList.contains('thumb')) {
+              if (imageRef.current) {
+                imageRef.current.src = e.target.src;
+              }
+            }
       })
     }, [])
     
@@ -537,7 +540,7 @@ const ProjectDisplay = ({prjName="prj-reviewlens",setPrjName}:{setPrjName:any,pr
         <aside className='bg-white dark:bg-black border-1 rounded-xl border-[#777] grid grid-rows-[auto_1fr] relative bg-[#111] w-[90vw] ml-[5vw] h-[70vh] mt-[16vh] sm:w-[80vw] sm:ml-[10vw] sm:h-[80vh] sm:mt-[10vh]'>
             <nav className='max-w-[90vw] sm:max-w-100vw grid grid-cols-[repeat(3,1fr_auto_auto)] sm:flex  items-center gap-3 px-5 py-2 border-b-1 border-[#444] '>
               <div className='flex items-center gap-3'>
-                <svg className='w-10' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 504.131 504.131" xml:space="preserve" fill="#000000">
+                <svg className='w-10' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504.131 504.131" fill="#000000">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier"> 
@@ -610,11 +613,11 @@ const ProjectDisplay = ({prjName="prj-reviewlens",setPrjName}:{setPrjName:any,pr
             <div className='grid sm:grid-cols-[1fr_1fr] h-full max-h-[calc(80vh-60px)] overflow-y-scroll'>
                 <div className="hidden sm:block left px-10 py-5 grid grid-rows-[auto_1fr] gap-5 justify-center max-h-full overflow-hidden">
                     <div className="max-w-100%">
-                        {image.length && <img ref={imageRef} src={image[0]} className="w-full rounded-lg max-h-[40vh]" alt="Main Image" />}
+                        {image?.length && <img ref={imageRef} src={image[0]} className="w-full rounded-lg max-h-[40vh]" alt="Main Image" />}
                     </div>
 
                     <div className="grid grid-cols-[repeat(4,1fr)] gap-4 overflow-y-auto h-full gray-scrollbar" ref={containerref}>
-                        {image.map((val,index)=>{
+                        {image?.map((val,index)=>{
                             return <img src={val} alt={`image ${index}`} className="thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80" />
                         })}
                     </div>
@@ -622,11 +625,11 @@ const ProjectDisplay = ({prjName="prj-reviewlens",setPrjName}:{setPrjName:any,pr
                 <div className="right px-1 py-5">
                   {navtab==5 && <div className="left px-2 grid grid-rows-[auto_1fr] gap-5 justify-center max-h-full overflow-hidden">
                     <div className="max-w-100%">
-                        {image.length && <img ref={imageRefTab} src={image[imageTab]} className="w-full rounded-lg max-h-[40vh]" alt="Main Image" />}
+                        {image?.length && <img ref={imageRefTab} src={image[imageTab]} className="w-full rounded-lg max-h-[40vh]" alt="Main Image" />}
                     </div>
 
                     <div className="grid grid-cols-[repeat(4,1fr)] gap-4 overflow-y-auto h-full gray-scrollbar" ref={containerrefTab}>
-                        {image.map((val,index)=>{
+                        {image?.map((val,index)=>{
                             return <img onClick={()=>setImageTab(index)} src={val} alt={`image ${index}`} className="thumb rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80" />
                         })}
                     </div>

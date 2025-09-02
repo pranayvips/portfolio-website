@@ -6,7 +6,6 @@ import Project from './pages/Project'
 import TopLeftShare from './components/mypart/TopLeftShare'
 import Education from './pages/Education'
 import Skills from './pages/Skills'
-import Sparkle from './components/mypart/Sparkle'
 import Contact from './pages/Contact'
 import {  useEffect, useRef, useState } from 'react'
 import ProjectDisplay from './pages/project/ProjectDisplay'
@@ -18,7 +17,6 @@ function App() {
   const [positionContext,setpositionContext] = useState([0,0])
   const [showContext,setshowContext] = useState(false)
   const menuRef = useRef<HTMLDivElement | null>(null);
-  const [currentSection,setCurrentSection] = useState("")
 
   const [locoScroll,setLocoScroll] = useState<LocomotiveScroll>()
   const containerRef = useRef<HTMLDivElement>(null);
