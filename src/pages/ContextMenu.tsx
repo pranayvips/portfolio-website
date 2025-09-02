@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface ContextMenuProp{
     positionContext: Array<number>;
     ref: any,
