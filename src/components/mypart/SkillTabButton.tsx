@@ -1,4 +1,3 @@
-import React from 'react'
 import "./skilltabbutton.css"
 import { motion } from "framer-motion";
 

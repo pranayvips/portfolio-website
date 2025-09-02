@@ -3,11 +3,8 @@ import { Card } from "@/components/ui/card";
 import {
   RocketIcon,
   CubeIcon,
-  LockClosedIcon,
   GlobeIcon,
-  GearIcon,
   LightningBoltIcon,
-  StarIcon,
   MagicWandIcon,
 } from "@radix-ui/react-icons";
 

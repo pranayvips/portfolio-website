@@ -9,6 +9,7 @@ export const ContactInput = ({text,type,name}:Contactinput) =>{
     return <input type={type} name={name} className="contactInput" placeholder={text} />
 }
 export const ContactTextarea = ({text,type,name}:Contactinput) =>{
+    type;
     return <textarea name={name} className="contactInput" placeholder={text} ></textarea>
 }
 

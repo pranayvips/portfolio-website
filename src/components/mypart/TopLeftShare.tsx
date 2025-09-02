@@ -1,4 +1,3 @@
-import React from 'react'
 import "./topleftshare.css"
 const TopLeftShare = () => {
   return (

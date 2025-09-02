@@ -5,16 +5,14 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, type PanInfo, useMotionValue, useTransform } from "motion/react";
 import React, { type JSX } from "react";
-import { faPython, faAngular, faNodeJs, faHtml5, faCss3, faJs, faReact, } from "@fortawesome/free-brands-svg-icons";
+import { faPython, faAngular, faHtml5, faCss3, faJs, faReact, } from "@fortawesome/free-brands-svg-icons";
 
 
 // replace icons with your own if needed
 import {
   FiCircle,
-  FiCode,
   FiFileText,
   FiLayers,
-  FiLayout,
 } from "react-icons/fi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";

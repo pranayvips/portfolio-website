@@ -1,4 +1,3 @@
-import  { useRef } from 'react'
 import { motion } from "framer-motion";
 import { CoolMode } from "@/components/magicui/cool-mode";
 import { FlipText } from "@/components/magicui/flip-text";
@@ -11,8 +10,6 @@ import { BoxReveal } from '@/components/magicui/box-reveal';
 import MyWorkButton from '@/components/mypart/MyWorkButton';
 
 const Hero = () => {
-
-    const containerRef = useRef(null);
 
     return (
       <section id='home' data-scroll-section className='text-black dark:text-white h-screen w-screen overflow-hidden px-[3rem] sm:px-[10rem]  relative flex flex-col justify-center relative'>

@@ -1,8 +1,6 @@
 "use client";
 
-import { CalendarIcon, HomeIcon, MailIcon, Sun, Moon,PocketKnifeIcon,PhoneIcon, MessageCircle, MessageCircleIcon } from "lucide-react";
-// import Link from "next/link";
-import { Link } from "react-router-dom";
+import {  HomeIcon,  Sun, Moon,PocketKnifeIcon, MessageCircleIcon } from "lucide-react";
 import React, { useState } from "react";
 
 // import { ModeToggle } from "@/components/mode-toggle";

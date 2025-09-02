@@ -1,4 +1,3 @@
-import React from 'react'
 import ClickSpark from '../Animations/ClickSpark/ClickSpark'
 
 const Sparkle = () => {
