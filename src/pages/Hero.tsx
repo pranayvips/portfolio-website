@@ -83,7 +83,7 @@ const Hero = ({locoScroll}:{locoScroll: any}) => {
                 </motion.div>
             </CoolMode>
 
-            <a href="/Pranay Resume.pdf" download>
+            <a href="/Pranay_Resume.pdf" download>
                 <motion.div
                     initial={{ y:30 ,opacity:.5}}
                     whileInView={{ y:0,opacity:1}}
