@@ -1,4 +1,5 @@
 import "./contactinput.css"
+import { delay, motion } from "framer-motion"
 
 interface Contactinput{
     text:string,
@@ -6,21 +7,36 @@ interface Contactinput{
     name:string,
 }
 export const ContactInput = ({text,type,name}:Contactinput) =>{
-    return <input type={type} name={name} className="contactInput" placeholder={text} />
+    return <motion.input initial={{ opacity:0,y:-20,scale:0}}
+    whileInView={{ opacity:1,y:0,scale:1}}
+    transition={{ duration: .3}}
+    viewport={{ once: false, amount:.2}} autoComplete="off" type={type} name={name} className="contactInput mb-3 sm:mb-0" placeholder={text} />
 }
 export const ContactTextarea = ({text,type,name}:Contactinput) =>{
     type;
-    return <textarea name={name} className="contactInput" placeholder={text} ></textarea>
+    return <motion.textarea initial={{ opacity:0,y:-20,scale:0}}
+    whileInView={{ opacity:1,y:0,scale:1}}
+    transition={{ duration: .3}}
+    viewport={{ once: false, amount:.2}} autoComplete="off" name={name} className="contactInput" placeholder={text} ></motion.textarea>
 }
 
 
-export const ContactSend = ()=>{
-    return <button className="contactButton w-30">
+export const ContactSend = ({onclick}:{onclick:Function})=>{
+    return <motion.button
+    initial={{ opacity:0,y:30,scale:0}}
+    whileInView={{ opacity:1,y:0,scale:1}}
+    transition={{ duration: .3}}
+    viewport={{ once: false, amount:.2}}
+     className="contactButton w-30" onClick={()=>onclick()}>
   Send
-</button>
+</motion.button>
 }
 
-export const ContactClear = ()=>{
-    return <button className="contactClear"> Clear
-</button>
+export const ContactClear = ({onclick}:{onclick:Function})=>{
+    return <motion.button initial={{ opacity:0,y:30,scale:0}}
+    whileInView={{ opacity:1,y:0,scale:1}}
+    transition={{ duration: .3}}
+    viewport={{ once: false, amount:.2}}
+     className="contactClear" onClick={()=>onclick()}> Clear
+</motion.button>
 }

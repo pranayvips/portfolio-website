@@ -11,8 +11,8 @@ const skillSvgClass =
 const Frontend = () => {
   return (
     <>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -38,8 +38,8 @@ const Frontend = () => {
         </svg>
         <p>Html</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -65,8 +65,8 @@ const Frontend = () => {
         </svg>
         <p>Css</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -95,8 +95,8 @@ const Frontend = () => {
         </svg>
         <p>JavaScript</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -127,8 +127,8 @@ const Frontend = () => {
         </svg>
         <p>React</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -171,8 +171,8 @@ const Frontend = () => {
         </svg>
         <p>Angular</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -212,8 +212,8 @@ const Frontend = () => {
 const Backend = () => {
   return (
     <>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -237,8 +237,8 @@ const Backend = () => {
         </svg>
         <p>Node Js</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -264,8 +264,8 @@ const Backend = () => {
         </svg>
         <p>PHP</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -305,8 +305,8 @@ const Backend = () => {
 const Library = () => {
   return (
     <>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -343,8 +343,8 @@ const Library = () => {
         </svg>
         <p>BootStrap CSS</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -369,8 +369,8 @@ const Library = () => {
         </svg>
         <p>Tailwind CSS</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -430,8 +430,8 @@ const Library = () => {
 const Languages = () => {
   return (
     <>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -487,8 +487,8 @@ const Languages = () => {
         </svg>
         <p>Python</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -528,8 +528,8 @@ const Languages = () => {
         </svg>
         <p>C++</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -581,8 +581,8 @@ const Languages = () => {
         </svg>
         <p>Java</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -641,8 +641,8 @@ const Languages = () => {
 const Database = () => {
   return (
     <>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -667,8 +667,8 @@ const Database = () => {
         </svg>
         <p>SQL</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -756,8 +756,8 @@ const Database = () => {
 const Other = () => {
   return (
     <>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -785,8 +785,8 @@ const Other = () => {
         </svg>
         <p>Github</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -836,8 +836,8 @@ const Other = () => {
         </svg>
         <p>Figma</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -909,8 +909,8 @@ const Other = () => {
         </svg>
         <p>VS Code</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -939,8 +939,8 @@ const Other = () => {
         </svg>
         <p>Android Studio</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
@@ -1121,8 +1121,8 @@ const Other = () => {
         </svg>
         <p>Firebase</p>
       </motion.div>
-      <motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+      <motion.div initial={{scale:0, y:100 ,opacity:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg

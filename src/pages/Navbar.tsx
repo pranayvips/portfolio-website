@@ -62,12 +62,12 @@ export function Navbar({locoScroll}:NavbarProp) {
   const [isDarkTheme,setIsdarkTheme] = useState(false);
 
   return (
-    <header className="z-5000 flex flex-col items-center justify-center fixed bottom-5 left-[50%] translate-x-[-50%] rounded-full">
+    <header className="z-5000 flex flex-col items-center justify-center fixed bottom-1 sm:bottom-5  left-[50%] translate-x-[-50%] rounded-full">
       <motion.div
         initial={{ y: "100%", opacity: 0 }}
         animate={{ y: "0%", opacity: 1 }}
         transition={{ duration:1,delay:1.5, ease: "easeOut" }}
-        className="bg-white dark:bg-black rounded-xl"
+        className="bg-white dark:bg-[#111] shadow-md rounded-xl"
       >
       <TooltipProvider>
         <Dock direction="middle">

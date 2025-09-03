@@ -8,8 +8,8 @@ interface SkillTabProps{
     onclick: Function
 }
 const SkillTabButton = ({text,active,onclick}:SkillTabProps) => {
-  return (<motion.div initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+  return (<motion.div initial={{ scale:0,y:100 ,opacity:0}}
+      whileInView={{ scale:1,y:0,opacity:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: .1 }} onClick={()=>onclick()}>
 

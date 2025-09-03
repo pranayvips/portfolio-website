@@ -48,12 +48,11 @@ function App() {
       }
     }} onContextMenu={(e)=>{e.preventDefault();setshowContext(false);setshowContext(true);setpositionContext([e.clientX,e.clientY])}}>
       {prjName.length>1 &&  <ProjectDisplay  setPrjName={setPrjName} prjName={prjName} /> }
-      {/* <Sparkle /> */}
       <Navbar locoScroll={locoScroll}/>
       {showContext && <ContextMenu locoScroll={locoScroll} ref={menuRef} positionContext={positionContext} setshowContext={setshowContext} />}
       <TopLeftShare />
-      <Hero /> 
-      <About />
+      <Hero locoScroll={locoScroll} /> 
+      <About locoScroll={locoScroll} />
       <Project setPrjName={setPrjName} />
       <Education />
       <Skills />

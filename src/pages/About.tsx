@@ -6,7 +6,7 @@ import { MySkillCloud } from '@/components/mypart/MySkill'
 import { motion } from "framer-motion";
 
 
-const About = () => {
+const About = ({locoScroll}:{locoScroll: any}) => {
   return (
     <section id='about' data-scroll-section className='text-black dark:text-white flex flex-col min-h-screen w-screen overflow-hidden px-[3rem] sm:px-[10rem] relative flex flex-col justify-center items-center relative'>
       <motion.h1 
@@ -41,19 +41,19 @@ const About = () => {
                whileInView={{x:0,opacity:1}}
                transition={{ duration: .5 }}
                viewport={{ once: false, amount: 0.5 }}
-               className='text-white bg-[#212529] dark:bg-indigo-500 rounded-xs flex flex-col py-3 px-10 gap-2 shadow-md'><span className='text-4xl'>40 +</span><span className='whitespace-nowrap text-xs'>Project's Completed</span></motion.p>
+               className='text-white bg-[#212529] dark:bg-indigo-500 rounded-xs flex flex-col py-3 px-10 gap-2 shadow-md'><span className='text-4xl'>20 +</span><span className='whitespace-nowrap text-xs'>Project's Completed</span></motion.p>
               <motion.p
                initial={{ x:100,opacity:0}}
                whileInView={{x:0,opacity:1}}
                transition={{ duration: .5 }}
                viewport={{ once: false, amount: 0.5 }}
-               className='text-white bg-[#212529] dark:bg-indigo-500 rounded-xs flex flex-col py-3 px-10 gap-2 shadow-md'><span className='text-4xl'>2 +</span><span className='whitespace-nowrap text-xs'>Year of experience</span></motion.p>
+               className='text-white bg-[#212529] dark:bg-indigo-500 rounded-xs flex flex-col py-3 px-10 gap-2 shadow-md'><span className='text-4xl'>4 </span><span className='whitespace-nowrap text-xs'>Different Domains</span></motion.p>
             </div>
           </div>
           <div className='flex gap-5 sm:gap-10 mt-10'>
-            <AboutEducation />
-            <AboutButton />
-            <AboutProject classname="ml-auto sm:ml-0" />
+            <AboutEducation onclick={()=>{locoScroll.scrollTo("#education")}} />
+            <AboutButton onclick={()=>{locoScroll.scrollTo("#contact")}} />
+            <AboutProject classname="ml-auto sm:ml-0" onclick={()=>{locoScroll.scrollTo("#project")}} />
           </div>
         </div>
       </div>

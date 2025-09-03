@@ -14,6 +14,7 @@ interface PopUpCardProp {
   data: Array<any>;
   image: string;
   fileName: string;
+  link:string
 }
 
 const LangData = {
@@ -25,20 +26,18 @@ const LangData = {
   python: [<i className="devicon-python-plain"></i>, "Python"],
 };
 
-interface ProjectProp {
-  setPrjName: any;
-}
-const Project = ({ setPrjName }: ProjectProp) => {
 
-  function PopUpCard({ name, data, image, fileName }: PopUpCardProp) {
+const Project = ({ setPrjName }: {setPrjName: any}) => {
+
+  function PopUpCard({ name, data, image, fileName,link }: PopUpCardProp) {
     const [hovered, setHovered] = useState(false);
     return (
       <motion.div
-        initial={{ y:100 ,opacity:0}}
-      whileInView={{ y:0,opacity:1}}
+        initial={{ y:100 ,opacity:0,scale:0}}
+      whileInView={{ y:0,opacity:1,scale:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }}
-        className="relative cursor-pointer hover:z-1000"
+        className="relative cursor-pointer hover:z-400"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         onClick={() => {
@@ -47,7 +46,11 @@ const Project = ({ setPrjName }: ProjectProp) => {
         }}
       >
         {/* Only Image (default view) */}
-        <img
+        <motion.img
+        initial={{ scale:0}}
+    whileInView={{scale:1}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}
           src={image}
           alt="Profile"
           className={`hidden sm:block rounded-sm w-[90%] mx-auto shadow-lg transition-all duration-300 ${
@@ -57,7 +60,7 @@ const Project = ({ setPrjName }: ProjectProp) => {
 
         {/* Popup Card with Image + Info */}
         <div
-          className={`sm:absolute sm:top-[-20px] sm:left-1/2 mx-auto sm:mx-0 transform sm:translate-x-1/2 w-max bg-white border rounded-2xl shadow-xl p-4 transition-all duration-300 ${
+          className={`sm:absolute sm:top-[-20px] sm:left-1/2 mx-auto sm:mx-0 transform sm:-translate-x-1/2 w-max bg-white border rounded-2xl shadow-xl p-4 transition-all duration-300 ${
             hovered
               ? "opacity-100 scale-100 translate-y-0"
               : "sm:opacity-0 scale-95 translate-y-3 sm:pointer-events-none"
@@ -95,7 +98,7 @@ const Project = ({ setPrjName }: ProjectProp) => {
 
           <div className="flex gap-2 mt-3 items-center justify-between">
             <OpenButton />
-            <GithubButton />
+            <GithubButton onclick={()=>window.open(link)} />
           </div>
         </div>
       </motion.div>
@@ -103,7 +106,7 @@ const Project = ({ setPrjName }: ProjectProp) => {
   }
 
   return (
-    <section id="project" data-scroll-section className="overflow-hidden text-black min-h-screen w-screen sm:px-[10rem] relative flex flex-col justify-center items-center relative">
+    <section id="project" data-scroll-section className="overflow-hidden text-black min-h-screen w-screen sm:px-[10rem] relative flex flex-col  items-center relative">
       {/* <h1 className='col-span-2 text-left font-normal text-7xl self-start mb-15'>Project's</h1> */}
       <div 
         data-scroll
@@ -116,64 +119,54 @@ const Project = ({ setPrjName }: ProjectProp) => {
       viewport={{ once: false, amount: 0.5 }} className="text-4xl h-[80px] sm:h-max sm:text-6xl font-normal tracking-tighter self-start flex items-center sm:gap-5">
           <ProjectHeading/> My <AuroraText className="ml-3 sm:ml-0">Project's &nbsp;</AuroraText>
         </motion.h1>
+
         <ProjectFilter />
       </div>
 
       <nav className="grid sm:grid-cols-[repeat(3,1fr)] w-full gap-y-15 gap-x-15">
-        {/* <Prj name="ReviewLens" fileName="prj-reviewlens" images={[{"id":1,"img":"/prj-reviewlens/0.png"},{"id":2,"img":"/prj-reviewlens/1.png"},{"id":3,"img":"/prj-reviewlens/2.png"},{"id":4,"img":"/prj-reviewlens/3.png"},{"id":5,"img":"/prj-reviewlens/4.png"},{"id":6,"img":"/prj-reviewlens/5.png"}]}/>
-            <Prj name="HomePage" fileName="prj-homepage" images={[{"id":1,"img":"/prj-homepage/0.png"},{"id":2,"img":"/prj-homepage/1.png"},{"id":3,"img":"/prj-homepage/2.png"},{"id":4,"img":"/prj-homepage/3.png"},{"id":5,"img":"/prj-homepage/4.png"}]}/>
-            <Prj name="Split" fileName="prj-split" images={[{"id":1,"img":"/prj-split/0.png"},{"id":2,"img":"/prj-split/1.png"},{"id":3,"img":"/prj-split/2.png"},{"id":4,"img":"/prj-split/3.png"},{"id":5,"img":"/prj-split/4.png"},{"id":6,"img":"/prj-split/5.png"}]}/>
-            <Prj name="Tic Tac Toe" fileName="prj-tictactoe" images={[{"id":1,"img":"/prj-tictactoe/0.png"},{"id":2,"img":"/prj-tictactoe/1.png"},{"id":3,"img":"/prj-tictactoe/2.png"},{"id":4,"img":"/prj-tictactoe/3.png"},{"id":5,"img":"/prj-tictactoe/4.png"},{"id":6,"img":"/prj-tictactoe/5.png"},{"id":7,"img":"/prj-tictactoe/6.png"}]}/>
-            <Prj name="ShoeStop" fileName="prj-shoestop" images={[{"id":1,"img":"/prj-shoestop/0.png"},{"id":2,"img":"/prj-shoestop/1.png"},{"id":3,"img":"/prj-shoestop/2.png"},{"id":4,"img":"/prj-shoestop/3.png"},{"id":5,"img":"/prj-shoestop/4.png"},{"id":6,"img":"/prj-shoestop/5.png"},{"id":7,"img":"/prj-shoestop/6.png"}]}/>
-            <Prj name="Gemini" fileName="prj-gemini" images={[{"id":1,"img":"/prj-gemini/0.png"},{"id":2,"img":"/prj-gemini/1.png"},{"id":3,"img":"/prj-gemini/2.png"},{"id":4,"img":"/prj-gemini/3.png"},{"id":5,"img":"/prj-gemini/4.png"}]}/>
-            <Prj name="Youtube" fileName="prj-youtube" images={[{"id":1,"img":"/prj-youtube/0.png"},{"id":2,"img":"/prj-youtube/1.png"},{"id":3,"img":"/prj-youtube/2.png"},{"id":4,"img":"/prj-youtube/3.png"},{"id":5,"img":"/prj-youtube/4.png"},{"id":6,"img":"/prj-youtube/5.png"},{"id":7,"img":"/prj-youtube/8.png"}]}/>
-            <Prj name="Periodic Table" fileName="prj-periodic" images={[{"id":1,"img":"/prj-periodic/0.png"},{"id":2,"img":"/prj-periodic/1.png"},{"id":3,"img":"/prj-periodic/2.png"},{"id":4,"img":"/prj-periodic/3.png"},{"id":5,"img":"/prj-periodic/4.png"},{"id":6,"img":"/prj-periodic/5.png"},{"id":7,"img":"/prj-periodic/6.png"}]}/> */}
-        {/* <ProjectItem name="ReviewLens" image="/prj-reviewlens/5.png" />
-            <ProjectItem name="HomePage" image="/prj-homepage/4.png" />
-            <ProjectItem name="Split" image="/prj-split/5.png" />
-            <ProjectItem name="Tic Tac Toe" image="/prj-tictactoe/6.png" />
-            <ProjectItem name="ShoeStop" image="/prj-shoestop/6.png" />
-            <ProjectItem name="Gemini" image="/prj-gemini/3.png" />
-            <ProjectItem name="Youtube" image="/prj-youtube/0.png" />
-            <ProjectItem name="Periodic Table" image="/prj-periodic/6.png" /> */}
-
         <PopUpCard
           fileName="prj-reviewlens"
           data={["react", "python", "html", "css", "js"]}
           name="ReviewLens"
           image="/prj-reviewlens/5.png"
+          link="https://github.com/pranayvips/reviewlens"
         />
         <PopUpCard
           fileName="prj-homepage"
           data={["react", "python", "html", "css", "js"]}
           name="HomePage"
           image="/prj-homepage/4.png"
+          link="https://github.com/pranayvips/homePage"
         />
         <PopUpCard
           fileName="prj-split"
           data={["react", "python", "html", "css", "js"]}
           name="Split"
           image="/prj-split/5.png"
+          link="https://github.com/pranayvips/split"
         />
         <PopUpCard
           fileName="prj-tictactoe"
           data={["react", "python", "html", "css", "js"]}
           name="Tic Tac Toe"
           image="/prj-tictactoe/6.png"
+          link="https://github.com/pranayvips/tictactoe"
         />
         <PopUpCard
           fileName="prj-shoestop"
           data={["react", "python", "html", "css", "js"]}
           name="ShoeStop"
           image="/prj-shoestop/6.png"
+          link="https://github.com/pranayvips/shoes"
         />
         <PopUpCard
           fileName="prj-periodic"
           data={["react", "python", "html", "css", "js"]}
           name="Periodic Table"
           image="/prj-periodic/6.png"
+          link=""
         />
-        <PopUpCard
+        {/* <PopUpCard
           fileName="prj-gemini"
           data={["react", "python", "html", "css", "js"]}
           name="Gemini"
@@ -190,7 +183,7 @@ const Project = ({ setPrjName }: ProjectProp) => {
           data={["react", "python", "html", "css", "js"]}
           name="Gemini"
           image="/prj-gemini/3.png"
-        />
+        /> */}
       </nav>
     </section>
   );

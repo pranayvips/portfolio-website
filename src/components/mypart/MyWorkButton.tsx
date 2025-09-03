@@ -1,8 +1,8 @@
 import "./myworkbutton.css"
 
-const MyWorkButton = () => {
+const MyWorkButton = ({onclick}:{onclick:Function}) => {
   return (
-    <button className="button button-item">
+    <button className="button button-item" onClick={(e)=>{onclick()}}>
   <span className="button-bg">
     <span className="button-bg-layers">
       <span className="button-bg-layer button-bg-layer-1 -purple"></span>

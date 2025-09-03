@@ -196,7 +196,7 @@ const Education = () => {
           </div>
         )}
         {tab && (
-          <div className="overflow-x-visible overflow-y-auto max-w-screen px-5">
+          <div className="overflow-x-visible overflow-y-auto sm:max-w-[50vw] max-w-screen px-5">
             <Carousel className="w-full max-w-[90%] select-none dark:text-white">
               <CarouselContent>
                 <CarouselItem>

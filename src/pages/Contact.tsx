@@ -5,14 +5,21 @@ import {
   ContactTextarea
 } from "@/components/mypart/ContactInput";
 import ScrambledText from "@/components/TextAnimations/ScrambledText/ScrambledText";
+import emailjs from "emailjs-com";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const iconsvgClass = "size-10";
 const iconsvgButtonClass =
   "border border-[#222] rounded-lg px-5 py-3 cursor-pointer hover:bg-gray-100 transition-border-color duration-300 contact-button relative";
 
 const InstagramIcon = (
-  <button
-    onClick={() => window.open("https://www.instagram.com/https.pranay.in/")}
+  <motion.button
+    initial={{ opacity:0,scale:0}}
+    whileInView={{ opacity:1,scale:1}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}
+    onClick={() => window.open("https://www.instagram.com/pranayy.c3/")}
     className={iconsvgButtonClass}
   >
     <svg
@@ -38,11 +45,15 @@ const InstagramIcon = (
         <path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z" />
       </g>
     </svg>
-  </button>
+  </motion.button>
 );
 
 const LinkedinIcon = (
-  <button
+  <motion.button
+  initial={{ opacity:0,scale:0}}
+    whileInView={{ opacity:1,scale:1}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}
     onClick={() => window.open("https://www.linkedin.com/in/pranay-prasad-/")}
     className={iconsvgButtonClass}
   >
@@ -96,11 +107,15 @@ const LinkedinIcon = (
         </g>{" "}
       </g>
     </svg>
-  </button>
+  </motion.button>
 );
 
 const LeetcodeIcon = (
-  <button
+  <motion.button
+  initial={{ opacity:0,scale:0}}
+    whileInView={{ opacity:1,scale:1}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}
     onClick={() => window.open("https://leetcode.com/u/pranay_4862/")}
     className={iconsvgButtonClass}
   >
@@ -126,11 +141,15 @@ const LeetcodeIcon = (
         <path d="M21.469 23.907l-3.595 3.473c-0.624 0.625-1.484 0.885-2.432 0.885s-1.807-0.26-2.432-0.885l-5.776-5.812c-0.62-0.625-0.937-1.537-0.937-2.485 0-0.952 0.317-1.812 0.937-2.432l5.76-5.844c0.62-0.619 1.5-0.859 2.448-0.859s1.808 0.26 2.432 0.885l3.595 3.473c0.687 0.688 1.823 0.663 2.536-0.052 0.708-0.713 0.735-1.848 0.047-2.536l-3.473-3.511c-0.901-0.891-2.032-1.505-3.261-1.787l3.287-3.333c0.688-0.687 0.667-1.823-0.047-2.536s-1.849-0.735-2.536-0.052l-13.469 13.469c-1.307 1.312-1.989 3.113-1.989 5.113 0 1.996 0.683 3.86 1.989 5.168l5.797 5.812c1.307 1.307 3.115 1.937 5.115 1.937 1.995 0 3.801-0.683 5.109-1.989l3.479-3.521c0.688-0.683 0.661-1.817-0.052-2.531s-1.849-0.74-2.531-0.052zM27.749 17.349h-13.531c-0.932 0-1.692 0.801-1.692 1.791 0 0.991 0.76 1.797 1.692 1.797h13.531c0.933 0 1.693-0.807 1.693-1.797 0-0.989-0.76-1.791-1.693-1.791z" />{" "}
       </g>
     </svg>
-  </button>
+  </motion.button>
 );
 
 const GithubIcon = (
-  <button
+  <motion.button
+  initial={{ opacity:0,scale:0}}
+    whileInView={{ opacity:1,scale:1}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}
     onClick={() => window.open("https://github.com/pranayvips")}
     className={iconsvgButtonClass}
   >
@@ -184,11 +203,15 @@ const GithubIcon = (
         </g>{" "}
       </g>
     </svg>
-  </button>
+  </motion.button>
 );
 
 const TwitterIcon = (
-  <button
+  <motion.button
+  initial={{ opacity:0,scale:0}}
+    whileInView={{ opacity:1,scale:1}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}
     onClick={() => window.open("https://x.com/Pranay4862")}
     className={iconsvgButtonClass}
   >
@@ -209,11 +232,15 @@ const TwitterIcon = (
         <path d="M11.919 24.94c-2.548 0-4.921-.747-6.919-2.032a9.049 9.049 0 0 0 6.681-1.867 4.512 4.512 0 0 1-4.215-3.137c.276.054.559.082.848.082.412 0 .812-.056 1.193-.156a4.519 4.519 0 0 1-3.622-4.425v-.059a4.478 4.478 0 0 0 2.042.564 4.507 4.507 0 0 1-2.008-3.758c0-.824.225-1.602.612-2.268a12.811 12.811 0 0 0 9.303 4.715 4.517 4.517 0 0 1 7.692-4.115 9.107 9.107 0 0 0 2.866-1.094 4.542 4.542 0 0 1-1.983 2.498 9.08 9.08 0 0 0 2.592-.71 9.283 9.283 0 0 1-2.252 2.337c.008.193.014.388.014.583-.001 5.962-4.542 12.843-12.844 12.842"></path>
       </g>
     </svg>
-  </button>
+  </motion.button>
 );
 
 const RedditIcon = (
-  <button
+  <motion.button
+  initial={{ opacity:0,scale:0}}
+    whileInView={{ opacity:1,scale:1}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}
     onClick={() =>
       window.open("https://www.reddit.com/user/ZealousidealStep900/")
     }
@@ -242,7 +269,7 @@ const RedditIcon = (
         </g>{" "}
       </g>
     </svg>
-  </button>
+  </motion.button>
 );
 
 interface BottomButtonProps {
@@ -267,11 +294,12 @@ const BottomButton = ({ svg, title, content, link }: BottomButtonProps) => {
 };
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
   return (
     <section
     id="contact"
       data-scroll-section
-      className="p-5 flex flex-col justify-evenly pt-[80px] pb-25"
+      className="p-5 flex flex-col justify-evenly pt-[80px] pb-20"
     >
       {/* social links here */}
       <nav className="grid grid-cols-[repeat(3,max-content)] gap-7 sm:gap-0 sm:flex w-full justify-evenly ">
@@ -287,6 +315,11 @@ const Contact = () => {
         {RedditIcon}
       </nav>
       <div className="grid sm:grid-cols-[1fr_1fr] sm:gap-5 items-center mt-10">
+        <motion.div initial={{ opacity:0,scale:0}}
+    whileInView={{ opacity:1,scale:1}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}>
+
         <ScrambledText
           className="scrambled-text-demo text-4xl pr-5 cursor-default text-black dark:text-white"
           radius={50}
@@ -294,37 +327,40 @@ const Contact = () => {
           // textColor='text-[#DFBDC8]'
           speed={0.5}
           scrambleChars={".:"}
-        >
+          >
           Want to know more about, tell me about your project or just to say
           hello? Drop me a line and I'll get back as soon as possible.
         </ScrambledText>
+          </motion.div>
 
         <form
           className="flex flex-col pl-[10%] sm:pl-0"
+          ref={form}
           onSubmit={(e) => {
             e.preventDefault();
           }}
         >
-          <label
-            className="text-sm text-[#999] font-semibold mt-5 mb-3 text-left"
+          <motion.label
+          initial={{ opacity:0,scale:0,y:-30}}
+    whileInView={{ opacity:1,y:0}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}
+            className="text-sm text-[#999] font-semibold mt-5 mb-3 text-left hidden sm:block"
             htmlFor="contact-name-input"
           >
             Name
-          </label>
+          </motion.label>
           <ContactInput text="Enter Your Name" name="contact-name-input" type="text" />
-          {/* <input
-            className="text-base outline-none text-gray-400 border-2 border-[#333] w-[80%] px-3 py-2 rounded-sm resize-none"
-            type="text"
-            id="contact-name-input"
-            placeholder="Name"
-            required
-            /> */}
-          <label
-            className="text-sm text-[#999] font-semibold mt-5 mb-3 text-left"
+          <motion.label
+          initial={{ opacity:0,scale:0,y:-30}}
+    whileInView={{ opacity:1,y:0}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}
+            className="text-sm text-[#999] font-semibold mt-5 mb-3 text-left hidden sm:block"
             htmlFor="contact-name-email"
           >
             Email
-          </label>
+          </motion.label>
           <ContactInput text="Enter Your Email id" name="contact-name-email" type="email" />
           {/* <input
             className="text-base outline-none text-gray-400 border-2 border-[#333] w-[80%] px-3 py-2 rounded-sm resize-none"
@@ -333,17 +369,38 @@ const Contact = () => {
             placeholder="Email"
             required
           /> */}
-          <label
-            className="text-sm text-[#999] font-semibold mt-5 mb-3 text-left"
+          <motion.label
+          initial={{ opacity:0,scale:0,y:-30}}
+    whileInView={{ opacity:1,y:0}}
+    transition={{ duration: .5}}
+    viewport={{ once: false, amount:.2}}
+            className="text-sm text-[#999] font-semibold mt-5 mb-3 text-left hidden sm:block"
             htmlFor="contact-name-msg"
           >
             Message
-          </label>
+          </motion.label>
           <ContactTextarea type="text" name="contact-name-msg" text="Message..." />
 
           <div className="flex justify-between w-[80%] my-10 ">
-          <ContactSend />
-            <ContactClear />
+          <ContactSend onclick={()=>{
+            if(!form.current)return
+            
+            emailjs.sendForm("service_47zjwto", "template_q8qk90n", form.current, "4t_xVcQnm2u6_Gvxo").then(
+        (result) => {
+          console.log(result.text);
+          alert("Message Sent!");
+          if(form.current)
+          form.current.reset()
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message.");
+          if(form.current)
+          form.current.reset()
+        }
+      );
+          }}/>
+            <ContactClear onclick={()=>{if(form.current)form.current.reset()}} />
           </div>
         </form>
       </div>
