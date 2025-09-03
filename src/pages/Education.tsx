@@ -160,7 +160,7 @@ const Education = () => {
       <motion.div initial={{y:100,opacity:0}}
       whileInView={{y:0,opacity:1}}
       transition={{ duration: .5 }}
-      viewport={{ once: false, amount: 0.5 }} className="flex flex-col items-center">
+      viewport={{ once: false, amount: 0.5 }} className="hidden sm:flex flex-col items-center">
         <div className="bg-[#212121] w-max rounded-[50%]">
           <EducationLoader />
         </div>
@@ -180,6 +180,35 @@ const Education = () => {
             tab
               ? "text-7xl text-black dark:text-white"
               : "hover:scale-110 text-gray-300 dark:text-gray-700 text-6xl"
+          }`}
+        >
+          Courses
+        </h1>
+      </motion.div>
+
+      <motion.div initial={{y:100,opacity:0}}
+      whileInView={{y:0,opacity:1}}
+      transition={{ duration: .5 }}
+      viewport={{ once: false, amount: 0.5 }} className="sm:hidden grid grid-cols-[1fr_1fr]  items-center">
+        <div className="bg-[#212121] w-max rounded-[50%] col-span-2 mx-auto">
+          <EducationLoader />
+        </div>
+        <h1
+          onClick={() => setTab(false)}
+          className={`font-semibold pt-3 cursor-pointer duration-200 transition-transform text-2xl text-center w-full ${
+            !tab
+              ? "text-white"
+              : "text-gray-700"
+          }`}
+        >
+          Education
+        </h1>
+        <h1
+          onClick={() => setTab(true)}
+          className={`font-semibold pt-3 cursor-pointer duration-200 transition-transform text-2xl text-center w-full ${
+            tab
+              ? "text-white"
+              : "text-gray-700"
           }`}
         >
           Courses

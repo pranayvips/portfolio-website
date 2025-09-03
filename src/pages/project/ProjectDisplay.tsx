@@ -4,6 +4,7 @@ import Stepper, { Step } from "@/components/Components/Stepper/Stepper";
 import Rating from "./Rating";
 import { Share, SourceCode, Submit } from "@/components/mypart/SourceCode";
 import { motion } from "framer-motion";
+import { AxeIcon, ImageIcon, InfoIcon, LanguagesIcon, LineSquiggleIcon, StarIcon } from "lucide-react";
 
 const data = {
   "prj-split": {
@@ -481,7 +482,7 @@ const ProjectDisplay = ({
     return (
       <p
         onClick={() => setNavTab(current)}
-        className={`text-base h-[35px] group flex flex-col overflow-hidden border-gray-900  dark:border-gray-200 ${
+        className={`text-base h-[35px] min-w-[100px] pr-10 sm:pr-0 group flex flex-col overflow-hidden border-gray-900  dark:border-gray-200 ${
           navtab == current && "border-b-2"
         }`}
       >
@@ -494,6 +495,10 @@ const ProjectDisplay = ({
       </p>
     );
   };
+
+  const NavbarLinkPhone = ({icon,current}:{icon:any,current:number}) =>{
+    return <p onClick={()=>setNavTab(current)} className={`${current==navtab && "bg-gray-200 dark:bg-gray-900"} py-2 rounded-lg flex justify-center`}>{icon}</p>
+  }
 
   useEffect(() => {
     // this is to set the image of correct prjname
@@ -523,10 +528,10 @@ const ProjectDisplay = ({
         className="absolute h-screen w-screen bg-[rgba(0,0,0,0.8)]"
         onClick={() => setPrjName("")}
       ></div>
-      <aside className="bg-white dark:bg-black border-1 rounded-xl border-[#777] grid grid-rows-[auto_1fr] relative bg-[#111] w-[90vw] ml-[5vw] h-[70vh] mt-[16vh] sm:w-[80vw] sm:ml-[10vw] sm:h-[80vh] sm:mt-[10vh]">
-        <nav className="max-w-[90vw] sm:max-w-100vw grid grid-cols-[repeat(3,1fr_auto_auto)] sm:flex  items-center gap-3 px-5 py-2 border-b-1 border-[#444] ">
+      <aside className="bg-white dark:bg-black border-1 rounded-xl border-[#777] grid grid-rows-[auto_1fr] relative bg-[#111] w-screen h-[75vh] mt-[5vh] sm:w-[80vw] sm:ml-[10vw] sm:h-[80vh] sm:mt-[10vh]">
+        <nav className="max-w-screen sm:max-w-screen grid grid-cols-[repeat(3,1fr_auto_auto)] sm:flex  items-center gap-3 sm:px-5 py-2 border-b-1 border-[#444] ">
           <div className="flex items-center gap-3">
-            <svg
+            {/* <svg
               className="w-10"
               version="1.1"
               id="Layer_1"
@@ -665,25 +670,34 @@ const ProjectDisplay = ({
                   d="M277.299,425.519c0,0,42.937-6.774,30.885-88.867 c-12.052-82.085-39.905-98.651-24.852-138.571c0,0-12.052,17.313,53.469,82.842c65.512,65.512,69.671,164.935-40.283,164.194 c0,0-26.498-0.165-29.003-12.06C266.003,425.897,277.299,425.519,277.299,425.519z"
                 ></path>
               </g>
-            </svg>
-            <h1 className=" text-2xl font-normal">
+            </svg> */}
+            <h1 className="pl-3 text-2xl font-normal text-left">
               {data[prjName as keyof typeof data]["title"]}
             </h1>
           </div>
           {/* links */}
-          <div className="col-span-3 row-2 sm:ml-auto flex gap-2 flex-wrap">
+          <div className="col-span-3 gap-1 row-2 sm:ml-auto grid grid-cols-[repeat(6,1fr)] gap-2 w-screen sm:w-max overflow-x-auto sm:hidden">
+            <NavbarLinkPhone icon={<ImageIcon />} current={5} />
+            <NavbarLinkPhone icon={<InfoIcon />} current={0} />
+            <NavbarLinkPhone icon={<LanguagesIcon />} current={1} />
+            <NavbarLinkPhone icon={<AxeIcon />} current={2} />
+            <NavbarLinkPhone icon={<LineSquiggleIcon />} current={3} />
+            <NavbarLinkPhone icon={<StarIcon />} current={4} />
+
+          </div>
+          <div className="col-span-3 row-2 sm:ml-auto hidden sm:flex gap-2 w-screen sm:w-max overflow-x-auto">
+            {/* <div className="sm:hidden">
+              <NavbarLinks title="Image" current={5} />
+            </div> */}
             <NavbarLinks title="About" current={0} />
             <NavbarLinks title="Langugages" current={1} />
             <NavbarLinks title="Features" current={2} />
             <NavbarLinks title="Roadmap" current={3} />
             <NavbarLinks title="Review's" current={4} />
-            <div className="sm:hidden">
-              <NavbarLinks title="Image's" current={5} />
-            </div>
           </div>
           {/* Buttons */}
           <div className="sm:ml-auto flex gap-5">
-            <SourceCode name="Code" classname="" />
+            <SourceCode link={data[prjName as keyof typeof data]["link"]} name="Code" classname="" />
             {/* <button className='bg-white text-black text-base px-5 py-3 rounded-xl cursor-pointer' onClick={()=>window.open(data[prjName]["link"])}>Source Code</button> */}
             <button
               className="hover:bg-red-600 bg-red-500  text-base px-5 py-1 rounded-sm cursor-pointer text-white transition-bg duration-400"
@@ -807,7 +821,7 @@ const ProjectDisplay = ({
                   transition={{ duration: 0.5 }}
                   className="flex items-center mt-10"
                 >
-                  <SourceCode name="Source Code" classname="" />
+                  <SourceCode link={data[prjName as keyof typeof data]["link"]} name="Source Code" classname="" />
                   <Share />
                 </motion.div>
                 {/* <button className='bg-white px-2 text-black px-5 py-3 rounded-lg mt-10 w-max mr-10 cursor-pointer' onClick={()=>window.open(data[prjName]["link"])}>Source Code</button> */}
@@ -815,7 +829,7 @@ const ProjectDisplay = ({
             )}
 
             {navtab == 1 && (
-              <div className="flex flex-col h-full px-2 sm:px-0">
+              <div className="flex flex-col px-2 sm:px-0 pb-10">
                 <MyBarChart
                   language={data[prjName as keyof typeof data]["language"]}
                 />
@@ -904,7 +918,7 @@ const ProjectDisplay = ({
                             ease: "easeOut",
                           }}
                           key={index}
-                          className=" flex bg-[#111] items-center text-left gap-2 mb-3 sm:mb-3 cursor-default text-lg px-5 py-3 hover:bg-gray-100 dark:hover:bg-[#1f1f1f] rounded transition-bg duration-200"
+                          className=" flex bg-gray-200 dark:bg-[#111] items-center text-left gap-2 mb-3 sm:mb-3 cursor-default text-lg px-5 py-3 hover:bg-gray-100 dark:hover:bg-[#1f1f1f] rounded transition-bg duration-200"
                         >
                           <svg
                             viewBox="0 -3.5 170 170"
@@ -939,14 +953,14 @@ const ProjectDisplay = ({
               </div>
             )}
             {navtab == 3 && (
-              <div className="flex flex-col h-full max-w-[90vw] mt-5 px-2 sm:px-0">
+              <div className="flex flex-col h-full mt-5 px-2 sm:px-0">
                 <motion.h1
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className={`h-[50px] flex flex-col w-max pr-4 group overflow-hidden cursor-default`}
+                  className={`text-left h-[50px] hidden sm:flex flex-col pr-4 group overflow-hidden cursor-default`}
                 >
-                  <span className="h-[50px]  flex  text-4xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
+                  <span className="h-[50px] text-left  flex text-4xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
                     Step's To Installation
                     <svg
                       viewBox="0 0 24 24"
@@ -1007,6 +1021,40 @@ const ProjectDisplay = ({
                     </svg>
                   </span>
                 </motion.h1>
+                <motion.h1 
+                initial={{ opacity: 0, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                className="h-[50px] text-left  flex text-3xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
+                    Step's To Installation
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="size-12"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        {" "}
+                        <path
+                          d="M17 4H17.2C18.9913 4 19.887 4 20.4435 4.5565C21 5.11299 21 6.00866 21 7.8V8M17 20H17.2C18.9913 20 19.887 20 20.4435 19.4435C21 18.887 21 17.9913 21 16.2V16M7 4H6.8C5.00866 4 4.11299 4 3.5565 4.5565C3 5.11299 3 6.00866 3 7.8V8M7 20H6.8C5.00866 20 4.11299 20 3.5565 19.4435C3 18.887 3 17.9913 3 16.2V16"
+                          stroke="#ffffff"
+                          stroke-width="1"
+                          stroke-linecap="round"
+                        ></path>{" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.8149 12C18.8149 11.4637 18.6892 11.2462 18.4379 10.8112C17.5834 9.33247 15.6561 7 12 7C8.34395 7 6.41664 9.33247 5.56212 10.8112C5.31077 11.2462 5.18509 11.4637 5.18509 12C5.18509 12.5363 5.31077 12.7538 5.56212 13.1888C6.41664 14.6675 8.34395 17 12 17C15.6561 17 17.5834 14.6675 18.4379 13.1888C18.6892 12.7538 18.8149 12.5363 18.8149 12ZM12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3432 9 9.00001 10.3431 9.00001 12C9.00001 13.6569 10.3432 15 12 15Z"
+                          fill="#ffffff"
+                        ></path>{" "}
+                      </g>
+                    </svg></motion.h1>
                 <StepperComponent
                   array={data[prjName as keyof typeof data]["steps"]}
                 />

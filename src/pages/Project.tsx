@@ -106,15 +106,15 @@ const Project = ({ setPrjName }: {setPrjName: any}) => {
   }
 
   return (
-    <section id="project" data-scroll-section className="overflow-hidden text-black min-h-screen w-screen sm:px-[10rem] relative flex flex-col  items-center relative">
+    <section id="project" data-scroll-section className="text-black sm:mt-0 min-h-screen w-screen sm:px-[10rem] relative flex flex-col  items-center relative">
       {/* <h1 className='col-span-2 text-left font-normal text-7xl self-start mb-15'>Project's</h1> */}
       <div 
         data-scroll
         data-scroll-sticky
         data-scroll-target="#project"
         className="flex flex-col sm:flex-row justify-between sm:mb-15 w-full bg-white dark:bg-background dark:text-white z-500">
-        <motion.h1 initial={{ y:100 ,opacity:0}}
-      whileInView={{y:0,opacity:1}}
+        <motion.h1 initial={{ x:-100 ,opacity:0}}
+      whileInView={{x:0,opacity:1}}
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className="text-4xl h-[80px] sm:h-max sm:text-6xl font-normal tracking-tighter self-start flex items-center sm:gap-5">
           <ProjectHeading/> My <AuroraText className="ml-3 sm:ml-0">Project's &nbsp;</AuroraText>

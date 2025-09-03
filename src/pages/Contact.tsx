@@ -321,7 +321,7 @@ const Contact = () => {
     viewport={{ once: false, amount:.2}}>
 
         <ScrambledText
-          className="scrambled-text-demo text-4xl pr-5 cursor-default text-black dark:text-white"
+          className="scrambled-text-demo text-4xl sm:pr-5 cursor-default text-black dark:text-white"
           radius={50}
           duration={1.2}
           // textColor='text-[#DFBDC8]'
@@ -334,7 +334,7 @@ const Contact = () => {
           </motion.div>
 
         <form
-          className="flex flex-col pl-[10%] sm:pl-0"
+          className="flex flex-col px-2 sm:px-0"
           ref={form}
           onSubmit={(e) => {
             e.preventDefault();
@@ -381,7 +381,7 @@ const Contact = () => {
           </motion.label>
           <ContactTextarea type="text" name="contact-name-msg" text="Message..." />
 
-          <div className="flex justify-between w-[80%] my-10 ">
+          <div className="flex justify-between sm:w-[80%] my-10 ">
           <ContactSend onclick={()=>{
             if(!form.current)return
             

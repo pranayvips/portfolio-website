@@ -12,7 +12,7 @@ import MyWorkButton from '@/components/mypart/MyWorkButton';
 const Hero = ({locoScroll}:{locoScroll: any}) => {
 
     return (
-      <section id='home' data-scroll-section className='text-black dark:text-white h-screen w-screen overflow-hidden px-[3rem] sm:px-[10rem]  relative flex flex-col justify-center relative'>
+      <section id='home' data-scroll-section className='text-black dark:text-white h-screen w-screen overflow-hidden px-[2rem] sm:px-[10rem]  relative flex flex-col justify-center relative'>
         <motion.div
                     initial={{  opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -92,7 +92,7 @@ const Hero = ({locoScroll}:{locoScroll: any}) => {
                     className='cursor-pointer'
                 >
                     <InteractiveHoverButton className='px-[2rem] h-[3.5rem] rounded-md sm:block hidden'>Download CV</InteractiveHoverButton>
-                    <InteractiveHoverButton className='px-[2rem] h-[3.5rem] rounded-md block sm:hidden bg-white text-black'>My CV</InteractiveHoverButton>
+                    <InteractiveHoverButton className='px-[2rem] h-[3.5rem] rounded-md block sm:hidden bg-white text-black'>Resume</InteractiveHoverButton>
                 </motion.div>
             </a>
         </div>

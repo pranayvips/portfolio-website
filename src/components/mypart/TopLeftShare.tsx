@@ -1,7 +1,7 @@
 import "./topleftshare.css"
 const TopLeftShare = () => {
   return (
-    <aside className='fixed top-15 right-15 z-100'>
+    <aside className='fixed top-5 right-5 sm:top-15 sm:right-15 z-100'>
          <div className="tooltip-container">
   <span className="text">
     <svg

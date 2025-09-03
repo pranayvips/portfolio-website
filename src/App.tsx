@@ -41,13 +41,22 @@ function App() {
     // }, 2000); 
   }, []);
 
+  useEffect(() => {
+    if(prjName.length>1){
+      locoScroll?.stop()
+    }else{
+      locoScroll?.start()
+    }
+  }, [prjName])
+  
+
   return (
     <main ref={containerRef} data-scroll-container className="overflow-hidden" onClick={(e)=>{
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
         setshowContext(false); // Hide menu
       }
     }} onContextMenu={(e)=>{e.preventDefault();setshowContext(false);setshowContext(true);setpositionContext([e.clientX,e.clientY])}}>
-      {prjName.length>1 &&  <ProjectDisplay  setPrjName={setPrjName} prjName={prjName} /> }
+      {prjName.length>1 &&  <ProjectDisplay  setPrjName={setPrjName} prjName={prjName}  /> }
       <Navbar locoScroll={locoScroll}/>
       {showContext && <ContextMenu locoScroll={locoScroll} ref={menuRef} positionContext={positionContext} setshowContext={setshowContext} />}
       <TopLeftShare />

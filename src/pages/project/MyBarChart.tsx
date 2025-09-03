@@ -10,7 +10,7 @@ function LanguageComponent({iconName,langName,percentage}:LanguageComponentProps
   return (
     <motion.div initial={{  scale:0,opacity: 0 }}
                     animate={{  scale:1,opacity: 1 }}
-                    transition={{duration: .2, ease: "easeOut" }} className="p-4 grid grid-cols-[auto_1fr] items-center hover:bg-gray-200 dark:hover:bg-[#222] bg-gray-200 dark:bg-[#111] rounded transition-hover duration-150 cursor-default">
+                    transition={{duration: .2, ease: "easeOut" }} className="mb-10 p-4 grid grid-cols-[auto_1fr] items-center hover:bg-gray-200 dark:hover:bg-[#222] bg-gray-200 dark:bg-[#111] rounded transition-hover duration-150 cursor-default">
         <div className="lang-icon-medium grid grid-cols-[auto_1fr] gap-x-3 w-[150px]  justify-left items-start">
             {iconsSmall[iconName as keyof typeof iconsSmall]}
             <p className="text-left">{langName}</p>

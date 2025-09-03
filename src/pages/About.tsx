@@ -8,13 +8,13 @@ import { motion } from "framer-motion";
 
 const About = ({locoScroll}:{locoScroll: any}) => {
   return (
-    <section id='about' data-scroll-section className='text-black dark:text-white flex flex-col min-h-screen w-screen overflow-hidden px-[3rem] sm:px-[10rem] relative flex flex-col justify-center items-center relative'>
+    <section id='about' data-scroll-section className='mb-20 sm:mb-0 py-10 text-black dark:text-white flex flex-col min-h-screen w-screen overflow-hidden mt-20 sm:mt-0 px-[3rem] sm:px-[10rem] relative flex flex-col justify-center items-center relative'>
       <motion.h1 
         initial={{ x: -100 ,opacity:0}}
         whileInView={{ x: 0,opacity:1}}
         transition={{ duration: .5 }}
         viewport={{ once: false, amount: 0.5 }}
-        className='col-span-2 text-left font-normal text-5xl sm:text-7xl self-start mb-15 flex items-center gap-5'
+        className='col-span-2 text-left font-normal text-4xl sm:text-7xl self-start mb-15 flex items-center gap-5'
       >
        <AboutLoader /><SparklesText >About <LineShadowText className="italic" shadowColor="blue">Me</LineShadowText> </SparklesText>
       </motion.h1>
@@ -30,27 +30,40 @@ const About = ({locoScroll}:{locoScroll: any}) => {
               whileInView={{opacity:1}}
               transition={{ duration: .5 }}
               viewport={{ once: false, amount: 0.5 }}
-              className='text-left text-xs px-2 sm:px-0 sm:text-lg cursor-default'
+              className='text-left text-xs px-2 sm:px-0 sm:text-lg cursor-default hidden sm:block'
             >
                 I’m currently in my <Highlighter action="underline" color="#FF9800">final year (3rd)</Highlighter>  of studies pursuing <Highlighter action="highlight" color="#5227FF">Bachelor's in Computer Application</Highlighter> and have been actively exploring the evolving digital world, especially driven by my curiosity around the rise of AI and new technologies. With over two years of experience in <Highlighter action="underline" color="#FF9800">web development</Highlighter> and a year in <Highlighter action="underline" color="#FF9800">mobile app development</Highlighter>, I enjoy turning ideas into practical, user-friendly solutions. Beyond coding, I’m someone who values creativity and balance — I love to <Highlighter action="underline" color="#FF9800">travel</Highlighter>, also love to play <Highlighter action="underline" color="#FF9800">badminton</Highlighter> and <Highlighter action="underline" color="#FF9800">chess</Highlighter>, and often find myself <Highlighter action="underline" color="#FF9800">sketching or drawing</Highlighter> in my free time. I believe in learning through experience, and I'm always excited to take on new challenges that push both my technical and creative boundaries.
             </motion.p>
+            <motion.ul
+              initial={{ opacity:0}}
+              whileInView={{opacity:1}}
+              transition={{ duration: .5 }}
+              viewport={{ once: false, amount: 0.5 }}
+              className='text-left text-xs px-2 cursor-default sm:hidden block list-disc ml-2'
+            >
+                <li className='text-sm mb-3'>Currently pursuing Bachelor’s in Computer Application.</li>
+                <li className='text-sm mb-3'>In 5th sem (Final Year) with a aggregate cgpa of 8.5.</li>
+                <li className='text-sm mb-3'>Have worked on full stack on web developement & in app developement</li>
+                <li className='text-sm mb-3'>Used languages like react, node for web dev. Flutter for app developement</li>
+                <li className='text-sm mb-3'>Creative interests beyond coding: traveling, badminton, chess, and sketching.</li>
+            </motion.ul>
         
-            <div className='flex sm:flex-col gap-5'>
+            <div className='flex sm:flex-col sm:gap-5'>
               <motion.p
                initial={{ x:100,opacity:0}}
                whileInView={{x:0,opacity:1}}
                transition={{ duration: .5 }}
                viewport={{ once: false, amount: 0.5 }}
-               className='text-white bg-[#212529] dark:bg-indigo-500 rounded-xs flex flex-col py-3 px-10 gap-2 shadow-md'><span className='text-4xl'>20 +</span><span className='whitespace-nowrap text-xs'>Project's Completed</span></motion.p>
+               className='text-white bg-[#212529] scale-80 sm:scale-100 dark:bg-indigo-500 rounded-xs flex flex-col py-3 px-10 gap-2 shadow-md'><span className='text-4xl'>20 +</span><span className='whitespace-nowrap text-xs'>Project's Completed</span></motion.p>
               <motion.p
                initial={{ x:100,opacity:0}}
                whileInView={{x:0,opacity:1}}
                transition={{ duration: .5 }}
                viewport={{ once: false, amount: 0.5 }}
-               className='text-white bg-[#212529] dark:bg-indigo-500 rounded-xs flex flex-col py-3 px-10 gap-2 shadow-md'><span className='text-4xl'>4 </span><span className='whitespace-nowrap text-xs'>Different Domains</span></motion.p>
+               className='text-white bg-[#212529] scale-80 sm:scale-100 dark:bg-indigo-500 rounded-xs flex flex-col py-3 px-10 gap-2 shadow-md'><span className='text-4xl'>4 </span><span className='whitespace-nowrap text-xs'>Different Domains</span></motion.p>
             </div>
           </div>
-          <div className='flex gap-5 sm:gap-10 mt-10'>
+          <div className='flex px-3 gap-5 sm:gap-10 mt-10'>
             <AboutEducation onclick={()=>{locoScroll.scrollTo("#education")}} />
             <AboutButton onclick={()=>{locoScroll.scrollTo("#contact")}} />
             <AboutProject classname="ml-auto sm:ml-0" onclick={()=>{locoScroll.scrollTo("#project")}} />
@@ -63,3 +76,11 @@ const About = ({locoScroll}:{locoScroll: any}) => {
 }
 
 export default About
+
+
+
+
+
+
+
+

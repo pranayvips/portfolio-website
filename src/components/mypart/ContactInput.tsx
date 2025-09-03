@@ -5,12 +5,12 @@ interface Contactinput{
     text:string,
     type:string,
     name:string,
-}
+} 
 export const ContactInput = ({text,type,name}:Contactinput) =>{
     return <motion.input initial={{ opacity:0,y:-20,scale:0}}
     whileInView={{ opacity:1,y:0,scale:1}}
     transition={{ duration: .3}}
-    viewport={{ once: false, amount:.2}} autoComplete="off" type={type} name={name} className="contactInput mb-3 sm:mb-0" placeholder={text} />
+    viewport={{ once: false, amount:.2}} autoComplete="off" type={type} name={name} className="contactInput mb-5 sm:mb-3 sm:mb-0 sm:max-w-[80%]" placeholder={text} />
 }
 export const ContactTextarea = ({text,type,name}:Contactinput) =>{
     type;
