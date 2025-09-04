@@ -31,7 +31,11 @@ export const AboutButton = ({ onclick }: { onclick: Function }) => {
 };
 
 export const AboutLoader = () => {
-  return <div className="aboutLoader"></div>;
+  return <div className="typewriter scale-50 sm:scale-100 w-[60px] sm:w-max">
+    <div className="slide"><i></i></div>
+    <div className="paper"></div>
+    <div className="keyboard"></div>
+</div>;
 };
 
 export const AboutProject = ({

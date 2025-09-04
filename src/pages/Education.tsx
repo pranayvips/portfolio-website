@@ -116,7 +116,7 @@ const CourseSkill = ({ skills }: CourseSkillProps) => {
   return (
     <div className="flex gap-5">
       {skills.map((val, index) => (
-        <div key={index} className="text-2xl">
+        <div key={index} className="text-xl sm:text-2xl">
           {courseSkillIcon[
             val.toLowerCase() as keyof typeof courseSkillIcon
           ] ?? <span>{val}</span>}
@@ -133,17 +133,17 @@ interface CourseProp {
 }
 const Course = ({ skills, title, image }: CourseProp) => {
   return (
-    <div className="grid sm:grid-cols-[auto_1fr] gap-10 py-5 px-10 rounded-sm border-2 border-gray-200 ml-[30px] sm:max-w-[50vw]">
+    <div className="grid sm:grid-cols-[auto_1fr] gap-5 sm:gap-10 py-5 px-5 sm:px-10 rounded-sm border-2 sm:border-gray-200 ml-[30px] sm:max-w-[50vw]">
       <img
         src={image}
         alt=""
         className="h-[150px] rounded-sm border border-gray-200"
       />
       <div className="flex flex-col items-start gap-1">
-        <p className="text-lg font-semibold text-left mb-3">{title}</p>
+        <p className="text-base sm:text-lg font-semibold text-left mb-3">{title}</p>
         {/* skills */}
         <CourseSkill skills={skills} />
-        <InteractiveHoverButton className="w-30 h-10 rounded-sm">
+        <InteractiveHoverButton className="w-30 h-10 rounded-sm mt-3">
           Link
         </InteractiveHoverButton>
       </div>
@@ -155,7 +155,7 @@ const Education = () => {
   const [tab, setTab] = useState(false);
 
   return (
-    <section id="education"  data-scroll-section className="text-black min-h-screen w-screen overflow-hidden mt-20 sm:mt-0 sm:px-[10rem] sm:gap-10 sm:py-10 relative grid grid-rows-[auto_1fr] sm:[grid-template-rows:unset] sm:grid-cols-[.5fr_1fr] sm:justify-center sm:items-center relative">
+    <section id="education"  data-scroll-section className="text-black min-h-screen w-screen overflow-hidden mt-20 sm:mt-0 sm:px-[10rem] sm:gap-10 sm:py-10 relative flex flex-col sm:grid sm:grid-rows-[auto_1fr] sm:[grid-template-rows:unset] sm:grid-cols-[.5fr_1fr] justify-center sm:items-center relative">
       {/* <h1 className='text-left font-semibold text-7xl mb-10 text-[#5227FF]'>Education <br /> & Courses</h1> */}
       <motion.div initial={{y:100,opacity:0}}
       whileInView={{y:0,opacity:1}}
@@ -197,8 +197,8 @@ const Education = () => {
           onClick={() => setTab(false)}
           className={`font-semibold pt-3 cursor-pointer duration-200 transition-transform text-2xl text-center w-full ${
             !tab
-              ? "text-white"
-              : "text-gray-700"
+              ? "dark:text-white text-black"
+              : "dark:text-gray-700 text-gray-300"
           }`}
         >
           Education
@@ -207,8 +207,8 @@ const Education = () => {
           onClick={() => setTab(true)}
           className={`font-semibold pt-3 cursor-pointer duration-200 transition-transform text-2xl text-center w-full ${
             tab
-              ? "text-white"
-              : "text-gray-700"
+              ? "dark:text-white text-black"
+              : "dark:text-gray-700 text-gray-300"
           }`}
         >
           Courses
@@ -225,7 +225,7 @@ const Education = () => {
           </div>
         )}
         {tab && (
-          <div className="overflow-x-visible overflow-y-auto sm:max-w-[50vw] max-w-screen px-5">
+          <div className="overflow-x-visible overflow-y-auto sm:max-w-[50vw] max-w-screen px-5 mt-10">
             <Carousel className="w-full max-w-[90%] select-none dark:text-white">
               <CarouselContent>
                 <CarouselItem>

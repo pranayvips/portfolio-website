@@ -14,9 +14,13 @@ const About = ({locoScroll}:{locoScroll: any}) => {
         whileInView={{ x: 0,opacity:1}}
         transition={{ duration: .5 }}
         viewport={{ once: false, amount: 0.5 }}
-        className='col-span-2 text-left font-normal text-4xl sm:text-7xl self-start mb-15 flex items-center gap-5'
+        className='col-span-2 text-left font-normal text-4xl sm:text-7xl self-start mb-5 sm:mb-15 flex items-center justify-start gap-5 whitespace-nowrap ml-[-30px] sm:ml-0'
       >
-       <AboutLoader /><SparklesText >About <LineShadowText className="italic" shadowColor="blue">Me</LineShadowText> </SparklesText>
+        <AboutLoader />
+        <SparklesText className='ml-3' >
+          About 
+          <LineShadowText className="italic" shadowColor="green" >&nbsp;Me</LineShadowText> 
+        </SparklesText>
       </motion.h1>
       
       <div className='flex gap-10 sm:flex-row flex-col max-w-screen'>
@@ -34,19 +38,21 @@ const About = ({locoScroll}:{locoScroll: any}) => {
             >
                 I’m currently in my <Highlighter action="underline" color="#FF9800">final year (3rd)</Highlighter>  of studies pursuing <Highlighter action="highlight" color="#5227FF">Bachelor's in Computer Application</Highlighter> and have been actively exploring the evolving digital world, especially driven by my curiosity around the rise of AI and new technologies. With over two years of experience in <Highlighter action="underline" color="#FF9800">web development</Highlighter> and a year in <Highlighter action="underline" color="#FF9800">mobile app development</Highlighter>, I enjoy turning ideas into practical, user-friendly solutions. Beyond coding, I’m someone who values creativity and balance — I love to <Highlighter action="underline" color="#FF9800">travel</Highlighter>, also love to play <Highlighter action="underline" color="#FF9800">badminton</Highlighter> and <Highlighter action="underline" color="#FF9800">chess</Highlighter>, and often find myself <Highlighter action="underline" color="#FF9800">sketching or drawing</Highlighter> in my free time. I believe in learning through experience, and I'm always excited to take on new challenges that push both my technical and creative boundaries.
             </motion.p>
-            <motion.ul
+            <motion.p
               initial={{ opacity:0}}
               whileInView={{opacity:1}}
               transition={{ duration: .5 }}
               viewport={{ once: false, amount: 0.5 }}
-              className='text-left text-xs px-2 cursor-default sm:hidden block list-disc ml-2'
+              // className='text-left text-xs px-2 cursor-default sm:hidden block list-disc ml-2'
+              className='text-left text-xs px-4 cursor-default sm:hidden block leading-relaxed'
             >
-                <li className='text-sm mb-3'>Currently pursuing Bachelor’s in Computer Application.</li>
+              Currently pursuing a &nbsp;<Highlighter className='text-white' action="highlight" color="#5227FF">&nbsp;Bachelor's in Computer Application</Highlighter>, I am in my 5th semester (<Highlighter action="underline" color="#5227FF">final year -3<sup>rd</sup></Highlighter>) with an aggregate CGPA of 8.5. I have hands-on experience in full-stack <Highlighter action="underline" color="#dc4f4fff">web development</Highlighter> and <Highlighter action="underline" color="#dc4f4fff">android app development</Highlighter>, working with technologies like React and Node.js for web and Flutter for mobile applications. Beyond coding, I enjoy exploring creative interests such as <Highlighter action="underline" color="#FF9800">travelling</Highlighter>, <Highlighter action="underline" color="#FF9800">playing badminton</Highlighter> and <Highlighter action="underline" color="#FF9800">chess</Highlighter>, and <Highlighter action="underline" color="#FF9800">sketching</Highlighter>.
+                {/* <li className='text-sm mb-3'>Currently pursuing Bachelor’s in Computer Application.</li>
                 <li className='text-sm mb-3'>In 5th sem (Final Year) with a aggregate cgpa of 8.5.</li>
                 <li className='text-sm mb-3'>Have worked on full stack on web developement & in app developement</li>
                 <li className='text-sm mb-3'>Used languages like react, node for web dev. Flutter for app developement</li>
-                <li className='text-sm mb-3'>Creative interests beyond coding: traveling, badminton, chess, and sketching.</li>
-            </motion.ul>
+                <li className='text-sm mb-3'>Creative interests beyond coding: traveling, badminton, chess, and sketching.</li> */}
+            </motion.p>
         
             <div className='flex sm:flex-col sm:gap-5'>
               <motion.p

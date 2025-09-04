@@ -17,7 +17,7 @@ export const ContactTextarea = ({text,type,name}:Contactinput) =>{
     return <motion.textarea initial={{ opacity:0,y:-20,scale:0}}
     whileInView={{ opacity:1,y:0,scale:1}}
     transition={{ duration: .3}}
-    viewport={{ once: false, amount:.2}} autoComplete="off" name={name} className="contactInput" placeholder={text} ></motion.textarea>
+    viewport={{ once: false, amount:.2}} autoComplete="off" name={name} className="contactInput sm:max-w-[80%]" placeholder={text} ></motion.textarea>
 }
 
 

@@ -92,7 +92,7 @@ const Hero = ({locoScroll}:{locoScroll: any}) => {
                     className='cursor-pointer'
                 >
                     <InteractiveHoverButton className='px-[2rem] h-[3.5rem] rounded-md sm:block hidden'>Download CV</InteractiveHoverButton>
-                    <InteractiveHoverButton className='px-[2rem] h-[3.5rem] rounded-md block sm:hidden bg-white text-black'>Resume</InteractiveHoverButton>
+                    <InteractiveHoverButton className='px-[2rem] h-[3.5rem] rounded-md block sm:hidden bg-white text-black dark:bg-[#111] dark:text-white'>Resume</InteractiveHoverButton>
                 </motion.div>
             </a>
         </div>

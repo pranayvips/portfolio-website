@@ -24,6 +24,7 @@ interface HighlighterProps {
   padding?: number;
   multiline?: boolean;
   isView?: boolean;
+  className?:string
 }
 
 export function Highlighter({
@@ -36,6 +37,7 @@ export function Highlighter({
   padding = 2,
   multiline = true,
   isView = false,
+  className=""
 }: HighlighterProps) {
   const elementRef = useRef<HTMLSpanElement>(null);
   const isInView = useInView(elementRef, {
@@ -81,7 +83,7 @@ export function Highlighter({
   ]);
 
   return (
-    <span ref={elementRef} className="relative inline-block bg-transparent">
+    <span ref={elementRef} className={"relative inline-block bg-transparent "+className}>
       {children}
     </span>
   );

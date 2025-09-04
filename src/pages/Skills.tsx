@@ -2,9 +2,10 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 import SkillTabButton from "@/components/mypart/SkillTabButton";
 import  { useState } from "react";
 import { motion } from "framer-motion";
+import { TechButton } from "@/components/mypart/TechButton";
 
 const skillButtonClass =
-  "dark:hover:bg-gray-900 min-w-[100px] lg:min-w-[130px] min-h-[80px] border border-[#06c8d9] rounded-lg py-3 items-center justify-center flex flex-col transition-bg duration-100 cursor-default ";
+  "text-xs sm:text-base dark:hover:bg-gray-900 min-w-[100px] lg:min-w-[130px] min-h-[80px] border border-[#06c8d9] rounded-lg py-3 items-center justify-center flex flex-col transition-bg duration-100 cursor-default ";
 const skillSvgClass =
   "size-11 mb-5 transition-transform duration-200";
 
@@ -1194,8 +1195,9 @@ const Skills = () => {
       // data-scroll data-scroll-sticky data-scroll-target="#skill"
       className="bg-white dark:bg-background z-100 pb-5 px-[1rem] sm:px-0 top-0"
       >
-        <h1 className="text-6xl font-bold text-left flex gap-5">
-          <AuroraText className="text-6xl font-bold">Tech</AuroraText>
+        <h1 className="text-5xl sm:text-6xl font-bold text-left flex gap-5 items-baseline">
+          <TechButton />
+          <AuroraText className="font-bold">Tech</AuroraText>
           Stack
         </h1>
         <div className="gap-1 hidden sm:flex sm:gap-5 mt-10 flex-wrap ">

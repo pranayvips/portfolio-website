@@ -97,7 +97,7 @@ export function ArcTimeline(props: ArcTimelineProps) {
   return (
     <div
       {...restProps}
-      className={cn("relative h-[380px] w-full overflow-hidden", className)}
+      className={cn("relative h-[410px] w-full overflow-hidden", className)}
     >
       <div
         style={{
