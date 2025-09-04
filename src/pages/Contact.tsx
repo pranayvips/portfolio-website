@@ -408,7 +408,7 @@ const Contact = () => {
       {/* bottom bar */}
       <div className="flex flex-col sm:flex-row gap-5 justify-around border-t-2 border-[#222] pt-8 mt-10">
         <BottomButton
-          link=""
+          link="mailto:prasadpranay2005@gmail.com"
           title="E-Mail"
           content="prasadpranay2005@gmail.com"
           svg={
@@ -492,7 +492,7 @@ const Contact = () => {
           }
         />
         <BottomButton
-          link=""
+          link="tel:+1234567890"
           title="Contact"
           content="+91 6203241318"
           svg={
@@ -529,7 +529,7 @@ const Contact = () => {
           }
         />
         <BottomButton
-          link=""
+          link="https://api.whatsapp.com/send/?phone=%2B916203241318&text&type=phone_number&app_absent=0"
           title="Whatsapp"
           content="Chat Now..."
           svg={

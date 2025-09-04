@@ -7,13 +7,19 @@
   padding: 0.7em 0.7em;
   border-radius: 50px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.9s;
 }
 .dark .tooltip-container{
   background: linear-gradient(138deg, rgb(255, 70, 70) 15%, #5227FF 65%);
 }
 .tooltip-container:hover {
   background: #fff;
-  transition: all 0.9s;
+}
+@media (max-width:700px) {
+  .tooltip-container:hover {
+    top: 50px;
+    right: 50px;
+  }
 }
 .tooltip-container .text {
   display: flex;

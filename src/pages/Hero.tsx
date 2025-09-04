@@ -8,9 +8,16 @@ import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-b
 import { ArrowDown } from 'lucide-react';
 import { BoxReveal } from '@/components/magicui/box-reveal';
 import MyWorkButton from '@/components/mypart/MyWorkButton';
+import { useEffect, useState } from "react";
 
 const Hero = ({locoScroll}:{locoScroll: any}) => {
-
+    const [showName,setShowName] = useState(false)
+    useEffect(() => {
+      setTimeout(() => {
+        setShowName(true)
+      }, 1000);
+    }, [])
+    
     return (
       <section id='home' data-scroll-section className='text-black dark:text-white h-screen w-screen overflow-hidden px-[2rem] sm:px-[10rem]  relative flex flex-col justify-center relative'>
         <motion.div
@@ -23,10 +30,12 @@ const Hero = ({locoScroll}:{locoScroll: any}) => {
         </motion.div>
         
         <motion.div
-                    initial={{  opacity: 0 }}
-                    animate={{  opacity: 1 }}
-                    transition={{delay:2.5, duration: 1, ease: "easeOut" }}
-                    className="select-none"
+                    // animate={{  opacity: 1 }}
+                    initial={{ opacity:0,scale:0}}
+                    whileInView={{ opacity:1,scale:1}}
+                    transition={{duration: .5, ease: "easeOut" }}
+                    viewport={{ once: false, amount:.2}}
+                    className="select-none w-max"
                 >
             <CoolMode>
         <h1 className='flex gap-2 border-2 border-gray-500 hover:border-[#333635] transition-border-color duration-400 w-max px-5 py-2 mb-7 rounded-2xl items-center cursor-default group'>
@@ -39,13 +48,17 @@ const Hero = ({locoScroll}:{locoScroll: any}) => {
             </CoolMode>
                 </motion.div>
             {/* <AuroraText className="text-sm font-semibold text-[#C7C7D2] text-center">Let's Connect</AuroraText> */}
-        <BoxReveal duration={0.5} boxColor='#53EAFD'>
-            <h1 className='text-3xl sm:text-6xl font-normal flex flex-wrap items-end gap-x-5'>Hi, I'm 
-                <FlipText className="text-4xl sm:text-7xl font-semibold -tracking-widest text-[#5227FF]  md:leading-[5rem]">
+            <div className='text-3xl sm:text-6xl font-normal flex flex-wrap items-end gap-x-5'>
+                <BoxReveal duration={0.5} boxColor='#53EAFD'>
+                    <h1>Hi, I'm </h1>
+                </BoxReveal>
+                {showName && <FlipText className="text-4xl sm:text-7xl font-semibold -tracking-widest text-[#5227FF]  md:leading-[5rem]">
                     Pranay Prasad
-                </FlipText>
-            </h1>
-        </BoxReveal>
+                </FlipText>}
+                {!showName && <BoxReveal duration={0.5} boxColor='#53EAFD'>
+                    <h1 className="text-5xl sm:text-7xl font-semibold -tracking-widest text-[#5227FF] text-background md:leading-[5rem]">Pranay Prasad</h1>
+                </BoxReveal>}
+            </div>
         
         {/* <BoxReveal duration={0.5} boxColor='#53EAFD'> */}
             <h2 className='grid sm:grid-cols-[.5fr_max-content] sm:text-6xl text-3xl items-center'>
@@ -73,8 +86,8 @@ const Hero = ({locoScroll}:{locoScroll: any}) => {
         <div className='flex mt-15 gap-10 overflow-hidden'>
             <CoolMode>
                 <motion.div
-                    initial={{ y:30 ,opacity:.5}}
-                    whileInView={{ y:0,opacity:1}}
+                    initial={{ y:30 ,opacity:.5,scale:0.5}}
+                    whileInView={{ y:0,opacity:1,scale:1}}
                     transition={{ duration: .5}}
                     viewport={{ once: false, amount:.2}}
                     className='cursor-pointer'
@@ -85,8 +98,8 @@ const Hero = ({locoScroll}:{locoScroll: any}) => {
 
             <a href="/Pranay_Resume.pdf" download>
                 <motion.div
-                    initial={{ y:30 ,opacity:.5}}
-                    whileInView={{ y:0,opacity:1}}
+                    initial={{ y:30 ,opacity:.5,scale:0.5}}
+                    whileInView={{ y:0,opacity:1,scale:1}}
                     transition={{ duration: .5}}
                     viewport={{ once: false, amount:.2}}
                     className='cursor-pointer'

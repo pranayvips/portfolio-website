@@ -155,7 +155,7 @@ const Education = () => {
   const [tab, setTab] = useState(false);
 
   return (
-    <section id="education"  data-scroll-section className="text-black min-h-screen w-screen overflow-hidden mt-20 sm:mt-0 sm:px-[10rem] sm:gap-10 sm:py-10 relative flex flex-col sm:grid sm:grid-rows-[auto_1fr] sm:[grid-template-rows:unset] sm:grid-cols-[.5fr_1fr] justify-center sm:items-center relative">
+    <section id="education"  data-scroll-section className="text-black min-h-screen w-screen overflow-hidden mt-20 sm:mt-0 sm:px-[10rem] sm:gap-10 sm:py-10 relative flex flex-col sm:grid sm:grid-cols-[.5fr_1fr] justify-center sm:items-center relative">
       {/* <h1 className='text-left font-semibold text-7xl mb-10 text-[#5227FF]'>Education <br /> & Courses</h1> */}
       <motion.div initial={{y:100,opacity:0}}
       whileInView={{y:0,opacity:1}}
