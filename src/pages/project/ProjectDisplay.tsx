@@ -4,7 +4,7 @@ import Stepper, { Step } from "@/components/Components/Stepper/Stepper";
 import Rating from "./Rating";
 import { Share, SourceCode, Submit } from "@/components/mypart/SourceCode";
 import { motion } from "framer-motion";
-import { AxeIcon, ImageIcon, InfoIcon, LanguagesIcon, LineSquiggleIcon, StarIcon } from "lucide-react";
+import { AxeIcon, CheckCircle, Feather, ImageIcon, InfoIcon, LanguagesIcon, LineSquiggle, LineSquiggleIcon, Star, StarIcon } from "lucide-react";
 
 const data = {
   "prj-split": {
@@ -531,146 +531,6 @@ const ProjectDisplay = ({
       <aside className="bg-white dark:bg-black border-1 rounded-xl border-[#777] grid grid-rows-[auto_1fr] relative bg-[#111] w-screen h-[75vh] mt-[5vh] sm:w-[80vw] sm:ml-[10vw] sm:h-[80vh] sm:mt-[10vh]">
         <nav className="max-w-screen sm:max-w-screen grid grid-cols-[repeat(3,1fr_auto_auto)] sm:flex  items-center gap-3 sm:px-5 py-2 border-b-1 border-[#444] ">
           <div className="flex items-center gap-3">
-            {/* <svg
-              className="w-10"
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 504.131 504.131"
-              fill="#000000"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <linearGradient
-                  id="SVGID_1_"
-                  gradientUnits="userSpaceOnUse"
-                  x1="-34.2429"
-                  y1="597.4838"
-                  x2="11.6721"
-                  y2="585.5878"
-                  gradientTransform="matrix(7.8769 0 0 -7.8769 364.0558 4969.6694)"
-                >
-                  <stop offset="0" style={{ stopColor: "#29D3DA" }}></stop>
-                  <stop offset="0.519" style={{ stopColor: "#0077FF" }}></stop>
-                  <stop offset="0.999" style={{ stopColor: "#064093" }}></stop>
-                  <stop offset="1" style={{ stopColor: "#084698" }}></stop>
-                </linearGradient>
-                <path
-                  style={{ fill: "url(#SVGID_1_)" }}
-                  d="M245.665,469.953c0,0-133.301-15.825-124.258-124.266 c9.035-108.457,149.118-162.674,106.189-248.533c0,0,67.773,54.225,2.253,173.97s48.577,128.788,47.443,79.076 c0,0,15.817,63.26-41.795,72.302c0,0,35.296,15.541,36.431,43.78c1.134,28.247-22.882,37.849-22.882,37.849 s16.258-11.099,13.564-23.442C260.631,471.647,245.665,469.953,245.665,469.953z"
-                ></path>
-                <linearGradient
-                  id="SVGID_2_"
-                  gradientUnits="userSpaceOnUse"
-                  x1="-18.3617"
-                  y1="587.5016"
-                  x2="-9.1356"
-                  y2="585.1066"
-                  gradientTransform="matrix(7.8769 0 0 -7.8769 364.0558 4969.6694)"
-                >
-                  <stop offset="0.012" style={{ stopColor: "#E0B386" }}></stop>
-                  <stop offset="0.519" style={{ stopColor: "#DA498C" }}></stop>
-                  <stop offset="1" style={{ stopColor: "#961484" }}></stop>
-                </linearGradient>
-                <path
-                  style={{ fill: "url(#SVGID_2_)" }}
-                  d="M262.608,337.778c-2.946,6.002-9.051,10.169-16.187,10.169s-13.241-4.167-16.187-10.169 c-1.166,2.402-1.89,5.057-1.89,7.908c0,9.988,8.082,18.078,18.078,18.078c9.98,0,18.078-8.09,18.078-18.078 C264.507,342.827,263.774,340.181,262.608,337.778z"
-                ></path>
-                <linearGradient
-                  id="SVGID_3_"
-                  gradientUnits="userSpaceOnUse"
-                  x1="-16.6378"
-                  y1="592.1655"
-                  x2="-10.0328"
-                  y2="588.0555"
-                  gradientTransform="matrix(7.8769 0 0 -7.8769 364.0558 4969.6694)"
-                >
-                  <stop offset="0.012" style={{ stopColor: "#E0B386" }}></stop>
-                  <stop offset="0.519" style={{ stopColor: "#DA498C" }}></stop>
-                  <stop offset="1" style={{ stopColor: "#961484" }}></stop>
-                </linearGradient>
-                <path
-                  style={{ fill: "url(#SVGID_3_)" }}
-                  d="M267.673,312.485c-3.765,3.954-9.523,5.711-15.084,3.97 c-5.545-1.733-9.295-6.459-10.114-11.847c-1.497,1.583-2.702,3.474-3.411,5.695c-2.418,7.767,1.906,16.037,9.673,18.479 c7.767,2.418,16.045-1.906,18.487-9.681C267.91,316.881,267.996,314.636,267.673,312.485z"
-                ></path>{" "}
-                <linearGradient
-                  id="SVGID_4_"
-                  gradientUnits="userSpaceOnUse"
-                  x1="-14.2172"
-                  y1="595.8834"
-                  x2="-10.8772"
-                  y2="591.1864"
-                  gradientTransform="matrix(7.8769 0 0 -7.8769 364.0558 4969.6694)"
-                >
-                  <stop offset="0.012" style={{ stopColor: "#E0B386" }}></stop>
-                  <stop offset="0.519" style={{ stopColor: "#DA498C" }}></stop>
-                  <stop offset="1" style={{ stopColor: "#961484" }}></stop>
-                </linearGradient>
-                <path
-                  style={{ fill: "url(#SVGID_4_)" }}
-                  d="M273.691,290.8c-3.71,1.631-8.145,1.174-11.453-1.591c-3.3-2.773-4.513-7.073-3.529-10.996 c-1.481,0.646-2.851,1.599-3.962,2.922c-3.875,4.616-3.277,11.516,1.331,15.391c4.624,3.868,11.524,3.277,15.415-1.339 C272.588,293.888,273.305,292.368,273.691,290.8z"
-                ></path>
-                <linearGradient
-                  id="SVGID_5_"
-                  gradientUnits="userSpaceOnUse"
-                  x1="-16.519"
-                  y1="569.5067"
-                  x2="-12.669"
-                  y2="568.5086"
-                  gradientTransform="matrix(7.8769 0 0 -7.8769 364.0558 4969.6694)"
-                >
-                  <stop offset="0" style={{ stopColor: "#29D3DA" }}></stop>
-                  <stop offset="0.519" style={{ stopColor: "#0077FF" }}></stop>
-                  <stop offset="0.999" style={{ stopColor: "#064093" }}></stop>
-                  <stop offset="1" style={{ stopColor: "#084698" }}></stop>
-                </linearGradient>
-                <circle
-                  style={{ fill: "url(#SVGID_5_)" }}
-                  cx="244.925"
-                  cy="486.558"
-                  r="7.538"
-                ></circle>
-                <linearGradient
-                  id="SVGID_6_"
-                  gradientUnits="userSpaceOnUse"
-                  x1="-28.7832"
-                  y1="621.1344"
-                  x2="-11.2412"
-                  y2="616.5894"
-                  gradientTransform="matrix(7.8769 0 0 -7.8769 364.0558 4969.6694)"
-                >
-                  <stop offset="0.012" style={{ stopColor: "#E0B386" }}></stop>
-                  <stop offset="0.519" style={{ stopColor: "#DA498C" }}></stop>
-                  <stop offset="1" style={{ stopColor: "#961484" }}></stop>
-                </linearGradient>
-                <path
-                  style={{ fill: "url(#SVGID_6_)" }}
-                  d="M216.292,99.415c0,0,0.008,72.302-45.757,77.383c-51.83,5.75-28.806-95.46,29.94-176.798 c0,0-32.957,70.609-20.338,98.288C195.592,132.167,216.292,99.415,216.292,99.415z"
-                ></path>
-                <linearGradient
-                  id="SVGID_7_"
-                  gradientUnits="userSpaceOnUse"
-                  x1="-18.5284"
-                  y1="592.3239"
-                  x2="18.3716"
-                  y2="582.7619"
-                  gradientTransform="matrix(7.8769 0 0 -7.8769 364.0558 4969.6694)"
-                >
-                  <stop offset="0.012" style={{ stopColor: "#E0B386" }}></stop>
-                  <stop offset="0.519" style={{ stopColor: "#DA498C" }}></stop>
-                  <stop offset="1" style={{ stopColor: "#961484" }}></stop>
-                </linearGradient>
-                <path
-                  style={{ fill: "url(#SVGID_7_)" }}
-                  d="M277.299,425.519c0,0,42.937-6.774,30.885-88.867 c-12.052-82.085-39.905-98.651-24.852-138.571c0,0-12.052,17.313,53.469,82.842c65.512,65.512,69.671,164.935-40.283,164.194 c0,0-26.498-0.165-29.003-12.06C266.003,425.897,277.299,425.519,277.299,425.519z"
-                ></path>
-              </g>
-            </svg> */}
             <h1 className="pl-3 text-2xl font-normal text-left">
               {data[prjName as keyof typeof data]["title"]}
             </h1>
@@ -844,65 +704,13 @@ const ProjectDisplay = ({
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   className={`h-[50px] flex flex-col w-max pr-4 mb-5 group overflow-hidden cursor-default`}
                 >
-                  <span className="h-[50px]  flex  text-4xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
+                  <span className="h-[50px] items-center flex  text-4xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
                     Features
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <path
-                          d="M17 4H17.2C18.9913 4 19.887 4 20.4435 4.5565C21 5.11299 21 6.00866 21 7.8V8M17 20H17.2C18.9913 20 19.887 20 20.4435 19.4435C21 18.887 21 17.9913 21 16.2V16M7 4H6.8C5.00866 4 4.11299 4 3.5565 4.5565C3 5.11299 3 6.00866 3 7.8V8M7 20H6.8C5.00866 20 4.11299 20 3.5565 19.4435C3 18.887 3 17.9913 3 16.2V16"
-                          stroke="#ffffff"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                        ></path>{" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M18.8149 12C18.8149 11.4637 18.6892 11.2462 18.4379 10.8112C17.5834 9.33247 15.6561 7 12 7C8.34395 7 6.41664 9.33247 5.56212 10.8112C5.31077 11.2462 5.18509 11.4637 5.18509 12C5.18509 12.5363 5.31077 12.7538 5.56212 13.1888C6.41664 14.6675 8.34395 17 12 17C15.6561 17 17.5834 14.6675 18.4379 13.1888C18.6892 12.7538 18.8149 12.5363 18.8149 12ZM12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3432 9 9.00001 10.3431 9.00001 12C9.00001 13.6569 10.3432 15 12 15Z"
-                          fill="#ffffff"
-                        ></path>{" "}
-                      </g>
-                    </svg>
+                    <Feather />
                   </span>
-                  <span className="h-[50px]  flex  text-4xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
+                  <span className="h-[50px] items-center flex  text-4xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
                     Features
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <path
-                          d="M17 4H17.2C18.9913 4 19.887 4 20.4435 4.5565C21 5.11299 21 6.00866 21 7.8V8M17 20H17.2C18.9913 20 19.887 20 20.4435 19.4435C21 18.887 21 17.9913 21 16.2V16M7 4H6.8C5.00866 4 4.11299 4 3.5565 4.5565C3 5.11299 3 6.00866 3 7.8V8M7 20H6.8C5.00866 20 4.11299 20 3.5565 19.4435C3 18.887 3 17.9913 3 16.2V16"
-                          stroke="#ffffff"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                        ></path>{" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M18.8149 12C18.8149 11.4637 18.6892 11.2462 18.4379 10.8112C17.5834 9.33247 15.6561 7 12 7C8.34395 7 6.41664 9.33247 5.56212 10.8112C5.31077 11.2462 5.18509 11.4637 5.18509 12C5.18509 12.5363 5.31077 12.7538 5.56212 13.1888C6.41664 14.6675 8.34395 17 12 17C15.6561 17 17.5834 14.6675 18.4379 13.1888C18.6892 12.7538 18.8149 12.5363 18.8149 12ZM12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3432 9 9.00001 10.3431 9.00001 12C9.00001 13.6569 10.3432 15 12 15Z"
-                          fill="#ffffff"
-                        ></path>{" "}
-                      </g>
-                    </svg>
+                    <Feather />
                   </span>
                 </motion.h1>
                 <div className="sm:pr-5">
@@ -920,30 +728,7 @@ const ProjectDisplay = ({
                           key={index}
                           className=" flex bg-gray-200 dark:bg-[#111] items-center text-left gap-2 mb-3 sm:mb-3 cursor-default text-lg px-5 py-3 hover:bg-gray-100 dark:hover:bg-[#1f1f1f] rounded transition-bg duration-200"
                         >
-                          <svg
-                            viewBox="0 -3.5 170 170"
-                            className="size-4"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g
-                              id="SVGRepo_tracerCarrier"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></g>
-                            <g id="SVGRepo_iconCarrier">
-                              {" "}
-                              <path
-                                d="M142.196 30.4125C142.586 30.0637 142.897 29.6356 143.109 29.1567C143.32 28.6778 143.427 28.1592 143.422 27.6357C143.417 27.1122 143.3 26.5959 143.079 26.1213C142.858 25.6467 142.538 25.2248 142.141 24.8838C141.722 24.5249 141.307 24.1678 140.895 23.8127C137.751 21.1093 134.5 18.3102 131.1 15.9225C105.123 -2.36044 78.1316 -2.4633 50.8803 7.23287C26.2068 16.0055 10.3619 33.5563 3.77909 59.3882C-3.56415 88.249 2.86618 113.71 22.9048 135.073C23.4261 135.625 23.9582 136.177 24.4895 136.704C35.2539 147.469 48.6614 154.115 59.2847 158.739C63.8445 160.731 87.2404 163.149 93.5707 162.206C131.19 156.588 155.946 135.37 164.569 99.8725C166.215 92.9194 167.035 85.7962 167.011 78.6508C166.974 71.1466 165.712 63.6988 163.275 56.6012C163.097 56.0703 162.805 55.5851 162.418 55.1805C162.031 54.7759 161.56 54.4618 161.037 54.2606C160.515 54.0595 159.954 53.9764 159.396 54.0171C158.838 54.0579 158.295 54.2216 157.808 54.4965L157.706 54.5547C156.931 54.9984 156.336 55.7005 156.027 56.5381C155.717 57.3757 155.712 58.2954 156.012 59.1364C158.212 65.2371 159.334 71.674 159.327 78.1592C159.251 85.9394 158.198 93.6792 156.192 101.197C150.248 122.8 136.038 138.545 112.75 149.315C89.0741 160.65 55.1215 149.19 46.0879 143.226C36.1031 136.4 27.3663 127.908 20.2596 118.121C9.11418 102.34 6.61369 79.6587 12.6028 58.9229C15.4055 49.3489 20.3036 40.5185 26.9421 33.0722C33.5806 25.6259 41.793 19.7503 50.9838 15.8714C74.8941 5.93474 98.8852 4.18192 122.285 19.0635C125.422 21.061 133.422 27.3424 137.465 30.5501C138.143 31.0882 138.99 31.3691 139.855 31.3432C140.721 31.3172 141.549 30.986 142.194 30.4082L142.196 30.4125Z"
-                                className="fill-black dark:fill-white"
-                              ></path>{" "}
-                              <path
-                                d="M74.6287 104.313C76.2312 102.79 77.1115 102.019 77.9173 101.177C103.753 74.1855 132.047 49.8851 160.508 25.7727C161.584 24.8619 162.685 23.7 163.958 23.3737C165.493 22.9815 167.996 23.4326 168.682 24.2661C169.133 24.8821 169.418 25.6035 169.509 26.3612C169.601 27.1189 169.496 27.8875 169.206 28.5932C168.537 30.3474 166.907 31.8498 165.429 33.1629C156.607 41.0019 147.538 48.5708 138.872 56.5716C120.756 73.3024 102.756 90.1576 84.8704 107.137C77.0334 114.561 74.0173 114.862 66.8059 106.929C62.0589 101.705 47.7328 84.0973 43.3455 78.5495C42.7256 77.6872 42.1735 76.7781 41.6941 75.8305C40.7045 74.0756 40.0576 72.1419 42.0246 70.7814C44.2158 69.2662 45.7707 70.8473 47.0696 72.4937C48.384 74.1607 49.5048 75.9916 50.9121 77.5713C55.2811 82.4737 69.908 99.1421 74.6287 104.313Z"
-                                className="fill-black dark:fill-white"
-                              ></path>{" "}
-                            </g>
-                          </svg>
+                          <CheckCircle />
                           {val[0]}
                         </motion.p>
                       );
@@ -953,79 +738,27 @@ const ProjectDisplay = ({
               </div>
             )}
             {navtab == 3 && (
-              <div className="flex flex-col h-full mt-5 px-2 sm:px-0">
+              <div className="flex flex-col h-full mt-5 px-2 sm:px-0 text-foreground">
                 <motion.h1
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   className={`text-left h-[50px] hidden sm:flex flex-col pr-4 group overflow-hidden cursor-default`}
                 >
-                  <span className="h-[50px] text-left  flex text-4xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
+                  <span className="h-[50px] mb-2 items-center text-left flex text-3xl whitespace-nowrap font-light gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
                     Step's To Installation
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <path
-                          d="M17 4H17.2C18.9913 4 19.887 4 20.4435 4.5565C21 5.11299 21 6.00866 21 7.8V8M17 20H17.2C18.9913 20 19.887 20 20.4435 19.4435C21 18.887 21 17.9913 21 16.2V16M7 4H6.8C5.00866 4 4.11299 4 3.5565 4.5565C3 5.11299 3 6.00866 3 7.8V8M7 20H6.8C5.00866 20 4.11299 20 3.5565 19.4435C3 18.887 3 17.9913 3 16.2V16"
-                          stroke="#ffffff"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                        ></path>{" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M18.8149 12C18.8149 11.4637 18.6892 11.2462 18.4379 10.8112C17.5834 9.33247 15.6561 7 12 7C8.34395 7 6.41664 9.33247 5.56212 10.8112C5.31077 11.2462 5.18509 11.4637 5.18509 12C5.18509 12.5363 5.31077 12.7538 5.56212 13.1888C6.41664 14.6675 8.34395 17 12 17C15.6561 17 17.5834 14.6675 18.4379 13.1888C18.6892 12.7538 18.8149 12.5363 18.8149 12ZM12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3432 9 9.00001 10.3431 9.00001 12C9.00001 13.6569 10.3432 15 12 15Z"
-                          fill="#ffffff"
-                        ></path>{" "}
-                      </g>
-                    </svg>
+                    <LineSquiggle />
                   </span>
-                  <span className="h-[50px]  flex  text-4xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
+                  <span className="h-[50px] items-center  flex  text-3xl whitespace-nowrap font-light gap-3 transition-transform duration-200 group-hover:translate-y-[-45px]">
                     Step's To Installation
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <path
-                          d="M17 4H17.2C18.9913 4 19.887 4 20.4435 4.5565C21 5.11299 21 6.00866 21 7.8V8M17 20H17.2C18.9913 20 19.887 20 20.4435 19.4435C21 18.887 21 17.9913 21 16.2V16M7 4H6.8C5.00866 4 4.11299 4 3.5565 4.5565C3 5.11299 3 6.00866 3 7.8V8M7 20H6.8C5.00866 20 4.11299 20 3.5565 19.4435C3 18.887 3 17.9913 3 16.2V16"
-                          stroke="#ffffff"
-                          stroke-width="1"
-                          stroke-linecap="round"
-                        ></path>{" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M18.8149 12C18.8149 11.4637 18.6892 11.2462 18.4379 10.8112C17.5834 9.33247 15.6561 7 12 7C8.34395 7 6.41664 9.33247 5.56212 10.8112C5.31077 11.2462 5.18509 11.4637 5.18509 12C5.18509 12.5363 5.31077 12.7538 5.56212 13.1888C6.41664 14.6675 8.34395 17 12 17C15.6561 17 17.5834 14.6675 18.4379 13.1888C18.6892 12.7538 18.8149 12.5363 18.8149 12ZM12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3432 9 9.00001 10.3431 9.00001 12C9.00001 13.6569 10.3432 15 12 15Z"
-                          fill="#ffffff"
-                        ></path>{" "}
-                      </g>
-                    </svg>
+                    <LineSquiggle />
                   </span>
                 </motion.h1>
                 <motion.h1 
                 initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                className="h-[50px] text-left  flex text-3xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
+                className="h-[50px] text-left sm:hidden flex text-3xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
                     Step's To Installation
                     <svg
                       viewBox="0 0 24 24"
@@ -1043,7 +776,7 @@ const ProjectDisplay = ({
                         {" "}
                         <path
                           d="M17 4H17.2C18.9913 4 19.887 4 20.4435 4.5565C21 5.11299 21 6.00866 21 7.8V8M17 20H17.2C18.9913 20 19.887 20 20.4435 19.4435C21 18.887 21 17.9913 21 16.2V16M7 4H6.8C5.00866 4 4.11299 4 3.5565 4.5565C3 5.11299 3 6.00866 3 7.8V8M7 20H6.8C5.00866 20 4.11299 20 3.5565 19.4435C3 18.887 3 17.9913 3 16.2V16"
-                          stroke="#ffffff"
+                          className="stroke-black dark:stroke-white"
                           stroke-width="1"
                           stroke-linecap="round"
                         ></path>{" "}
@@ -1051,7 +784,7 @@ const ProjectDisplay = ({
                           fill-rule="evenodd"
                           clip-rule="evenodd"
                           d="M18.8149 12C18.8149 11.4637 18.6892 11.2462 18.4379 10.8112C17.5834 9.33247 15.6561 7 12 7C8.34395 7 6.41664 9.33247 5.56212 10.8112C5.31077 11.2462 5.18509 11.4637 5.18509 12C5.18509 12.5363 5.31077 12.7538 5.56212 13.1888C6.41664 14.6675 8.34395 17 12 17C15.6561 17 17.5834 14.6675 18.4379 13.1888C18.6892 12.7538 18.8149 12.5363 18.8149 12ZM12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3432 9 9.00001 10.3431 9.00001 12C9.00001 13.6569 10.3432 15 12 15Z"
-                          fill="#ffffff"
+                          className="fill-black dark:fill-white"
                         ></path>{" "}
                       </g>
                     </svg></motion.h1>
@@ -1068,65 +801,13 @@ const ProjectDisplay = ({
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   className={`h-[50px] flex flex-col w-max pr-4 group overflow-hidden cursor-default`}
                 >
-                  <span className="h-[50px]  flex  text-4xl whitespace-nowrap font-thin gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
+                  <span className="h-[50px] mb-3 flex items-center text-3xl whitespace-nowrap font-light gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
                     Review's
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M6.64025 12.3374L5.63993 15.6449C5.39657 16.4496 4.65505 17 3.8144 17C3.36462 17 3 17.3646 3 17.8144V20C3 20.5523 3.44772 21 4 21H10.0563C10.5245 21 10.9301 20.6751 11.0322 20.2182L11.4794 18.2182C11.6191 17.5933 11.1437 17 10.5035 17H9.4517C8.14995 17 7.1959 15.7762 7.51157 14.5143C7.72499 13.6612 7.35552 12.7891 6.64025 12.3374ZM4.89177 11.21C5.13885 10.393 6.01688 9.94655 6.82258 10.2282L6.89163 10.2524C8.84403 10.935 9.95356 12.9938 9.45178 14.9997L10.5035 15C12.4243 15 13.8503 16.78 13.4312 18.6546L12.984 20.6546C12.6776 22.0254 11.461 23 10.0563 23H4C2.34315 23 1 21.6569 1 20V17.8144C1 16.2832 2.22285 15.0375 3.74526 15.0008L4.89177 11.21Z"
-                          fill="#ffffff"
-                        ></path>{" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M17.3598 11.6626L18.3601 8.35509C18.6034 7.55043 19.3449 7 20.1856 7C20.6354 7 21 6.63538 21 6.1856V4C21 3.44772 20.5523 3 20 3L13.9437 3C13.4755 3 13.0699 3.32488 12.9678 3.78181L12.5206 5.78181C12.3809 6.40666 12.8563 7 13.4965 7H14.5483C15.85 7 16.8041 8.22379 16.4884 9.48568C16.275 10.3388 16.6445 11.2109 17.3598 11.6626ZM19.1082 12.79C18.8611 13.607 17.9831 14.0535 17.1774 13.7718L17.1084 13.7476C15.156 13.065 14.0464 11.0062 14.5482 9.00033L13.4965 9C11.5757 9 10.1497 7.21998 10.5688 5.34543L11.016 3.34543C11.3224 1.97463 12.539 1 13.9437 1L20 1C21.6569 1 23 2.34315 23 4V6.1856C23 7.71684 21.7771 8.96246 20.2547 8.99917L19.1082 12.79Z"
-                          fill="#ffffff"
-                        ></path>{" "}
-                      </g>
-                    </svg>
+                    <Star className="text-yellow-500 fill-yellow-500" />
                   </span>
-                  <span className="h-[50px]  flex  text-4xl whitespace-nowrap font-normal gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
+                  <span className="h-[50px]  flex items-center text-3xl whitespace-nowrap font-light gap-3 transition-transform duration-200 group-hover:translate-y-[-50px]">
                     Review's
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M6.64025 12.3374L5.63993 15.6449C5.39657 16.4496 4.65505 17 3.8144 17C3.36462 17 3 17.3646 3 17.8144V20C3 20.5523 3.44772 21 4 21H10.0563C10.5245 21 10.9301 20.6751 11.0322 20.2182L11.4794 18.2182C11.6191 17.5933 11.1437 17 10.5035 17H9.4517C8.14995 17 7.1959 15.7762 7.51157 14.5143C7.72499 13.6612 7.35552 12.7891 6.64025 12.3374ZM4.89177 11.21C5.13885 10.393 6.01688 9.94655 6.82258 10.2282L6.89163 10.2524C8.84403 10.935 9.95356 12.9938 9.45178 14.9997L10.5035 15C12.4243 15 13.8503 16.78 13.4312 18.6546L12.984 20.6546C12.6776 22.0254 11.461 23 10.0563 23H4C2.34315 23 1 21.6569 1 20V17.8144C1 16.2832 2.22285 15.0375 3.74526 15.0008L4.89177 11.21Z"
-                          fill="#ffffff"
-                        ></path>{" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M17.3598 11.6626L18.3601 8.35509C18.6034 7.55043 19.3449 7 20.1856 7C20.6354 7 21 6.63538 21 6.1856V4C21 3.44772 20.5523 3 20 3L13.9437 3C13.4755 3 13.0699 3.32488 12.9678 3.78181L12.5206 5.78181C12.3809 6.40666 12.8563 7 13.4965 7H14.5483C15.85 7 16.8041 8.22379 16.4884 9.48568C16.275 10.3388 16.6445 11.2109 17.3598 11.6626ZM19.1082 12.79C18.8611 13.607 17.9831 14.0535 17.1774 13.7718L17.1084 13.7476C15.156 13.065 14.0464 11.0062 14.5482 9.00033L13.4965 9C11.5757 9 10.1497 7.21998 10.5688 5.34543L11.016 3.34543C11.3224 1.97463 12.539 1 13.9437 1L20 1C21.6569 1 23 2.34315 23 4V6.1856C23 7.71684 21.7771 8.96246 20.2547 8.99917L19.1082 12.79Z"
-                          fill="#ffffff"
-                        ></path>{" "}
-                      </g>
-                    </svg>
+                    <Star className="text-yellow-500 fill-yellow-500" />
                   </span>
                 </motion.h1>
                 <div>

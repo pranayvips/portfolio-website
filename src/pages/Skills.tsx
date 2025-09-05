@@ -270,14 +270,13 @@ const Backend = () => {
       transition={{ duration: .5 }}
       viewport={{ once: false, amount: 0.5 }} className={skillButtonClass}>
         <svg
-          className={skillSvgClass+" fill-black dark:fill-white"}
+          className={skillSvgClass+" fill-black dark:fill-white stroke-black dark:stroke-white"}
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           viewBox="0 0 512 512"
           enableBackground="new 0 0 512 512"
           xmlSpace="preserve"
-          stroke="#ffffff"
         >
           <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
           <g

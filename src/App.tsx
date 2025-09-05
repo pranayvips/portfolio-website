@@ -3,7 +3,7 @@ import { Navbar } from './pages/Navbar'
 import Hero from './pages/Hero'
 import About from './pages/About'
 import Project from './pages/Project'
-import TopLeftShare from './components/mypart/TopLeftShare'
+// import TopLeftShare from './components/mypart/TopLeftShare'
 import Education from './pages/Education'
 import Skills from './pages/Skills'
 import Contact from './pages/Contact'
@@ -59,7 +59,7 @@ function App() {
       {prjName.length>1 &&  <ProjectDisplay  setPrjName={setPrjName} prjName={prjName}  /> }
       <Navbar locoScroll={locoScroll}/>
       {showContext && <ContextMenu locoScroll={locoScroll} ref={menuRef} positionContext={positionContext} setshowContext={setshowContext} />}
-      <TopLeftShare />
+      {/* <TopLeftShare /> */}
       <Hero locoScroll={locoScroll} /> 
       <About locoScroll={locoScroll} />
       <Project setPrjName={setPrjName} />
